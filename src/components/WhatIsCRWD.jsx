@@ -35,10 +35,10 @@ const WhatIsCRWD = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="max-w-7xl mx-auto px-4 py-10 bg-[#F3F3F2]">
 
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">What is CRWD?</h1>
+      <div className="text-center mb-1">
+        <h1 className="text-4xl font-bold text-gray-900 mb-2">What is CRWD?</h1>
       </div>
 
           <div className="md:flex">

@@ -34,7 +34,7 @@ const NonProfit = () => {
         <div className='flex justify-center items-center my-10 flex-col md:flex-row gap-5'>
 
         <button className="cursor-pointer w-fit items-center px-8 h-12 gap-2 rounded-full flex flex-row bg-white text-gray-900 font-semibold shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200">
-          Start a<img className="h-11 w-11" src="logo.svg"/>
+          Start a<img className="h-12 w-12 object-contain" src="crwd.png"/>
         </button>        
         
         <button className="cursor-pointer w-fit items-center h-12 px-8 py-2 gap-2 rounded-full flex flex-row bg-white text-gray-900 font-semibold shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200">
