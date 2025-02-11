@@ -76,9 +76,9 @@ export default function HeroSection() {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
            ipsa quae  quasi architecto beatae vitae dicta sunt explicabo.
         </p>
-        <button className="cursor-pointer h-11 w-40 items-center px-6 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 font-semibold shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200">
+        <button className="cursor-pointer h-11 w-fit items-center px-6 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 font-semibold shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200">
           <div className="text-nowrap">Start a</div>
-          <img className="h-[13px] w-18" src="crwd.png"/>
+          <img className="h-[13px]  object-contain" src="crwd.png"/>
         </button>
       </div>
     </div>
