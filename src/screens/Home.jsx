@@ -20,7 +20,9 @@ const Home = () => {
    <FindNNonProfits/>
    </div>
    <Frame/>
+   <div className='bg-[#F3F3F2]'>
    <WhatIsCRWD/>
+   </div>
    <Footer/>
     
     </div>
