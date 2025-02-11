@@ -1,7 +1,8 @@
 
 import { useState } from "react"
-import Sidebar from "./Sidebar"
+
 import { Menu, Search } from "lucide-react"
+import Sidebar from "./SideBar"
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
