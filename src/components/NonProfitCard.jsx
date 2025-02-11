@@ -1,5 +1,6 @@
 import { MapPin, UserRound } from 'lucide-react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const crwds = [
     {
@@ -26,6 +27,11 @@ members:45
 ]
 
 const NonProfitCard = ({item}) => {
+  const navigation = useNavigate();
+
+  const navigateNonprofit = ()=>{
+        navigation('/nonprofit');
+  }
   return (
     <div className='rounded-xl p-4  bg-white'>
         <img src={item.image} className='rounded-xl w-full max-h-[500px] object-contain'/>
@@ -50,7 +56,7 @@ const NonProfitCard = ({item}) => {
             </div>
 
         </div>
-        <button className="px-8 py-3 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium">
+        <button onClick={navigateNonprofit} className="px-8 py-3 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium">
           Donate Now
         </button>
 

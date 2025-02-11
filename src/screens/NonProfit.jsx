@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import { Share } from 'lucide-react'
 import Slider from '../components/Slider'
+import Footer from '../components/Footer'
 
 const NonProfit = () => {
   return (
@@ -47,7 +48,7 @@ const NonProfit = () => {
 
 
 
-        <div className='flex flex-col md:flex-row justify-center items-center gap-5'>
+        <div className=' hidden md:flex flex-col md:flex-row justify-center items-center gap-5'>
                 <div className='rounded-xl shadow-xl flex flex-col gap-3 p-5 w-[250px] h-[170px] '>
                    <div className='text-[16px] font-semibold'>
                     Verified US nonprofit
@@ -75,6 +76,7 @@ const NonProfit = () => {
         </div>
 
         <Slider/>
+        <Footer/>
 
 
       

@@ -4,7 +4,7 @@ const HowCRWD = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
        <div className="text-center flex flex-col items-center justify-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Find your CRWD</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">How CRWD Work</h1>
         <p className="text-gray-600 text-center w-[80%]">
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
@@ -78,4 +78,4 @@ const HowCRWD = () => {
   )
 }
 
-export default HowCRWD
+export default HowCRWD;

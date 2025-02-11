@@ -5,6 +5,7 @@ import FindCRWD from '../components/FindCRWD'
 import FindNNonProfits from '../components/FindNNonProfits'
 import WhatIsCRWD from '../components/WhatIsCRWD'
 import Footer from '../components/Footer'
+import HowCRWD from '../components/HowCRWD'
 
 const Home = () => {
   return (
