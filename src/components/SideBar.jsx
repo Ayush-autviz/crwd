@@ -13,7 +13,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed z-50 top-0 right-0 h-full w-104 bg-white rounded-l-xl shadow-lg transform transition-transform duration-300 ease-in-out ${
+        className={`fixed z-50 top-0 right-0 h-full max-w-[80%] bg-white rounded-l-xl shadow-lg transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
