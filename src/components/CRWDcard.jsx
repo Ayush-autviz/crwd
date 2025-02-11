@@ -14,24 +14,24 @@ const CRWDcard = ({item}) => {
             <p className="text-gray-600 line-clamp-2">{item.description}</p>
           </div>
           <div className="flex items-center gap-4  ">
-              <div className='flex flex-row items-center gap-3'>
-              <UserRound size={18} color="#000" />
-               <div className='flex flex-row items-center justify-center gap-2'>
+              <div className='flex flex-row items-center gap-1'>
+              <UserRound size={15} color="#000" strokeWidth={2} />
+               <div className='flex flex-row items-center justify-center gap-1'>
                 <div>  {item.memberCount} </div>
                
                 <span className='hidden sm:block'> Members</span> 
                </div>
               </div>
 
-              <div className='flex flex-row items-center gap-3'>
-               <div className='flex flex-row items-center justify-center gap-2' >
+              <div className='flex flex-row items-center gap-1'>
+               <div className='flex flex-row items-center justify-center gap-1' >
                 <div>
                 Join 
                 </div>
               
                  <span className='hidden sm:block'>CRWD</span>
                </div>
-               <Plus size={18} color="#000" />
+               <Plus size={16} color="#000" strokeWidth={2} />
               </div>
 
           </div>
@@ -42,3 +42,5 @@ const CRWDcard = ({item}) => {
 }
 
 export default CRWDcard
+
+

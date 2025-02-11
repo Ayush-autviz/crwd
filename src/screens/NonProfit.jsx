@@ -8,6 +8,7 @@ const NonProfit = () => {
   return (
     <div>
         <Header/>
+        <div className='flex-1'>
         <div className='h-25 bg-[#616161] relative'>
                <div className='absolute top-[100%] shadow-xl left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24 bg-white p-5 rounded-full flex justify-center items-center'>
                     <img className='h-14 w-14' src='crwd2.svg'/>
@@ -76,6 +77,7 @@ const NonProfit = () => {
         </div>
 
         <Slider/>
+        </div>
         <Footer/>
 
 
