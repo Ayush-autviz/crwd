@@ -61,14 +61,19 @@ const MakeSecureDonation = () => {
                   <img  src='crwd1.svg'/>
             </div>
             <div className='flex flex-col   gap-2 '>
-            <h3 className=" text-xl font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
-            <p className="text-gray-600 text-sm line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
+            <h3 className=" text-xl text-center md:text-left font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
+            <p className="text-gray-600 text-center md:text-left text-sm line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
             </div>
 
          </div>
 
-         <h3 className="text-xl font-semibold text-gray-900 mt-5">Choose an amount for 1-time donation</h3>
-         
+         {
+          type === 'once' ? (
+            <h3 className="text-xl font-semibold text-gray-900 mt-5">Choose an amount for 1-time donation</h3>
+          ) : (
+            <h3 className="text-xl font-semibold text-gray-900 mt-5">Choose an amount for recurring donation</h3>
+          )
+         }
 
 
          <div className='flex flex-row items-center gap-4 flex-wrap  mt-5'>
