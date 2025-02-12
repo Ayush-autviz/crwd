@@ -34,12 +34,12 @@ const crwds = [
 
 const FindCRWD = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="max-w-7xl mx-auto px-4 mt-[100px]">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Find your CRWD</h1>
-        <p className="text-gray-600">
+        <h1 className="text-5xl font-bold text-gray-900 mb-4">Find your CRWD</h1>
+        <p className="text-[#393939] text-xl">
           Check out some CRWD's. If you can't find one that's perfect for you then{" "}
-          <a href="#" className="text-gray-900 underline font-medium">
+          <a href="#" className="text-gray-900 underline font-bold">
             Start a CRWD
           </a>
         </p>
@@ -56,7 +56,7 @@ const FindCRWD = () => {
       </div>
 
       <div className="flex justify-center mt-12 ">
-        <button className="px-8 py-3 rounded-full border hover:shadow-xl transition-shadow cursor-pointer   border-gray-300 text-gray-700 hover:text-gray-900 font-medium">
+        <button className="font-[20px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
           See more
         </button>
       </div>

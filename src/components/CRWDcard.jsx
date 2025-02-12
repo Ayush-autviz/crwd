@@ -8,30 +8,24 @@ const CRWDcard = ({item}) => {
            <img src={item.logo} className='h-[120px] w-[120px]' />
         </div>
 
-        <div className="flex flex-col w-[65%] justify-between py-4">
+        <div className="flex flex-col w-[65%] justify-center gap-y-6 py-4">
         <div className="space-y-2">
-            <h3 className="text-2xl font-semibold text-gray-900 line-clamp-2">{item.title}</h3>
-            <p className="text-gray-600 line-clamp-2">{item.description}</p>
+            <h3 className="text-2xl font-bold text-[#373737] line-clamp-2">{item.title}</h3>
+            <p className="text-[#6B6B6B] font-normal text-[16px] line-clamp-2">{item.description}</p>
           </div>
-          <div className="flex items-center gap-4  ">
-              <div className='flex flex-row items-center gap-1'>
-              <UserRound size={15} color="#000" strokeWidth={2} />
-               <div className='flex flex-row items-center justify-center gap-1'>
-                <div>  {item.memberCount} </div>
-               
-                <span className='hidden sm:block'> Members</span> 
+          <div className="flex items-center gap-x-8  ">
+              <div className='flex flex-row items-center gap-x-2  '>
+              <UserRound size={15} color="#000" strokeWidth={3} />
+               <div className='flex flex-row items-center '>               
+                <span className='text-[18px] font-semibold'> {item.memberCount}  Members</span> 
                </div>
               </div>
 
               <div className='flex flex-row items-center gap-1'>
                <div className='flex flex-row items-center justify-center gap-1' >
-                <div>
-                Join 
-                </div>
-              
-                 <span className='hidden sm:block'>CRWD</span>
+                 <span className='text-[18px] font-semibold'>Join CRWD</span>
                </div>
-               <Plus size={16} color="#000" strokeWidth={2} />
+               <Plus size={16} color="#000" strokeWidth={3} />
               </div>
 
           </div>
