@@ -57,21 +57,21 @@ const MakeSecureDonation = () => {
 
 
          <div className='flex flex-col md:flex-row items-center gap-4 mt-5  '>
-            <div className='rounded-xl border border-gray-300 flex justify-center items-center p-4    '>
-                  <img  src='crwd1.svg'/>
+            <div className='rounded-xl border border-gray-300 h-full    flex justify-center items-center p-4    '>
+                  <img className='h-full w-full'  src='crwd1.svg'/>
             </div>
             <div className='flex flex-col   gap-2 '>
-            <h3 className=" text-xl text-center md:text-left font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
-            <p className="text-gray-600 text-center md:text-left text-sm line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+            <h3 className="text-2xl  text-center md:text-left font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
+            <p className="text-gray-600 text-center md:text-left md:text-[18px] text-[14px] line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
             </div>
 
          </div>
 
          {
           type === 'once' ? (
-            <h3 className="text-xl font-semibold text-gray-900 mt-5">Choose an amount for 1-time donation</h3>
+            <h3 className=" text-[17px] md:text-xl font-semibold text-gray-900 mt-5">Choose an amount for 1-time donation</h3>
           ) : (
-            <h3 className="text-xl font-semibold text-gray-900 mt-5">Choose an amount for recurring donation</h3>
+            <h3 className="text-[17px] text-xl font-semibold text-gray-900 mt-5">Choose an amount for recurring donation</h3>
           )
          }
 
@@ -107,7 +107,7 @@ const MakeSecureDonation = () => {
         />
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-900 my-5">Payment Method</h3>
+        <h3 className=" text-[17px] md:text-xl font-semibold text-gray-900 my-5">Payment Method</h3>
 
         <div className='border border-gray-300 p-4 mb-4 rounded-xl'>
         <label className="flex items-center space-x-3  mx-1">
