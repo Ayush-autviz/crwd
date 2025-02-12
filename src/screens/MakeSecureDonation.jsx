@@ -57,7 +57,7 @@ const MakeSecureDonation = () => {
 
 
          <div className='flex flex-col md:flex-row items-center gap-4 mt-5  '>
-            <div className='rounded-xl border border-gray-300 h-full    flex justify-center items-center p-4    '>
+            <div className='rounded-xl border border-gray-300 h-[150px] w-full    flex justify-center items-center p-4    '>
                   <img className='h-full w-full'  src='crwd1.svg'/>
             </div>
             <div className='flex flex-col   gap-2 '>
@@ -77,22 +77,22 @@ const MakeSecureDonation = () => {
 
 
          <div className='flex flex-row items-center gap-4 flex-wrap  mt-5'>
-             <div onClick={()=>setAmount(5)}  className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5 flex justify-center items-center'>
+             <div onClick={()=>setAmount(5)}  className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5 flex justify-center items-center'>
                     $5
              </div>
-             <div onClick={()=>setAmount(10)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
+             <div onClick={()=>setAmount(10)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
                     $10
              </div>
-             <div onClick={()=>setAmount(15)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
+             <div onClick={()=>setAmount(15)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
                     $15
              </div>
-             <div onClick={()=>setAmount(20)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
+             <div onClick={()=>setAmount(20)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
                     $20
              </div>
-             <div onClick={()=>setAmount(25)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5 flex justify-center items-center'>
+             <div onClick={()=>setAmount(25)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5 flex justify-center items-center'>
                     $25
              </div>
-             <div onClick={()=>setAmount(30)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
+             <div onClick={()=>setAmount(30)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
                     $30
              </div>
          </div>
@@ -103,7 +103,7 @@ const MakeSecureDonation = () => {
           value={amount}
           onChange={(e)=>{setAmount(e.target.value)}}
           placeholder="USD $"
-          className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+          className="w-full text-[14px] md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
         />
         </div>
 
@@ -120,8 +120,8 @@ const MakeSecureDonation = () => {
                 className="h-4 w-4 disabled:border-[#393939] accent-[#393939] "
               />
               <div className='flex flex-row justify-center items-center gap-2'>
-              <img src='apple.svg'  className='h-6 w-6 mb-[2px] '/>
-              <span className="text-lg ">Pay</span>
+              <img src='apple.svg'  className='h-5 w-5 md:h-6 md:w-6 mb-[2px] '/>
+              <span className="text-[15px] md:text-lg ">Pay</span>
 
               </div>
              
@@ -139,7 +139,7 @@ const MakeSecureDonation = () => {
                 onChange={(e) => setPaymentMethod(e.target.value)}
                 className="h-4 w-4 disabled:border-[#393939] accent-[#393939]"
               />
-              <span className="text-lg">Credit Or debit card</span>
+              <span className="text-[15px] md:text-lg">Credit Or debit card</span>
             </label>
         {
             paymentMethod === 'credit-debit' &&   <div className="flex flex-col gap-4 mt-4">
@@ -200,7 +200,7 @@ const MakeSecureDonation = () => {
 
         <button
             //  onClick={()=>{setSuccess(true),setActivated(true)}}
-                className="bg-[#393939] mt-5  rounded-full cursor-pointer text-white py-3 w-full  hover:shadow-xl "
+                className="bg-[#393939] mt-5 text-[14px] md:text-xl text rounded-full cursor-pointer text-white py-3 w-full  hover:shadow-xl "
               >
                 Donate
         </button>
