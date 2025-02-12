@@ -13,17 +13,18 @@ import StartCRWD2 from './screens/StartCrwd2';
 const App = () => {
   return (
     <div>
-     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/nonprofit" element={<NonProfit />} />
-        <Route path="/donation" element={<MakeSecureDonation />} />
-        <Route path="/login" element={<StartCRWD2 />} />
-      </Routes>
-      <ScrollToTop />
-     </Router>
-     
-    
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/nonprofit" element={<NonProfit />} />
+          <Route path="/donation" element={<MakeSecureDonation />} />
+          <Route path="/login" element={<StartCRWD2 />} />
+          <Route path="/atlanata" element={<Atlanta />} />
+        </Routes>
+        <ScrollToTop />
+      </Router>
+
+
     </div>
   )
 }
