@@ -36,12 +36,12 @@ const Slider = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 my-10">
-      <h1 className="text-4xl font-bold text-center mb-4">CRWDs</h1>
-      <p className="text-center mb-8 text-gray-600 max-w-3xl mx-auto">
+      <h1 className="text-2xl md:text-5xl font-bold text-center mb-4">CRWDs</h1>
+      <p className="text-[12px] text-center md:text-[20px] mb-8 text-gray-600 max-w-3xl mx-auto">
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
       </p>
       
-      <div className="relative mx-10 mt-10">
+      <div className="relative md:mx-10 mt-10">
         <div className="overflow-hidden">
         <div
   className="flex transition-transform duration-300 ease-in-out"

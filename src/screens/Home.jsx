@@ -10,7 +10,7 @@ import Frame from '../components/Frame'
 
 const Home = () => {
   return (
-    <div>
+    <div className='mt-[70px]'>
          
    <Header/>
    <HeroSection/>

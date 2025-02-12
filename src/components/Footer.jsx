@@ -4,7 +4,7 @@ import Divider from './Divider';
 const Footer = () => {
   return (
     <footer className="w-full  bg-[#F3F3F2] ">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 pt-8">
     <Divider/>
               <div className='flex justify-center items-center flex-row gap-5 '>
               <a href="/" className="mx-2 hover:text-gray-400">Home</a>
@@ -13,7 +13,7 @@ const Footer = () => {
               </div>
     <Divider/>
       </div>
-      <div className='w-full   bg-[#E4E4E4] '>
+      <div className='w-full    '>
     <div className='flex flex-col   xl:flex-row gap-4 mx-auto justify-between items-center py-3 max-w-7xl '>
       <p>Copyright 2025 CRWD Collective</p>
       <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4">
@@ -35,6 +35,7 @@ const Footer = () => {
         </div>
         </div>
       </div>
+      <div className='md:hidden h-[90px]'/>
     </footer>
   );
 };

@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="h-[70px] shadow px-4 md:px-10 lg:px-20 flex flex-row justify-between items-center">
+      <div className="h-[70px] fixed top-0 left-0 z-50 w-full bg-white  shadow px-4 md:px-10 lg:px-20 flex flex-row justify-between items-center">
         <div className="flex flex-row items-center justify-center gap-1">
         <div className="h-8 w-8 hover:bg-[#F3F3F2] cursor-pointer justify-center items-center flex rounded-full">
          <Search color="#000" className="h-5 w-5"  />

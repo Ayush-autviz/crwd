@@ -7,7 +7,7 @@ const MakeSecureDonation = () => {
   const [amount,setAmount] = useState(null);
   const [type,setType] = useState('once');
   return (
-    <div>
+    <div className='mt-[70px]'>
       <Header/>
       <div className='relative  w-full flex justify-center items-center flex-col '>
       <img src="background.png" className="absolute -z-10 w-full h-full inset-0"/>
@@ -22,7 +22,7 @@ const MakeSecureDonation = () => {
         hover:shadow-xl 
         transition-shadow 
         cursor-pointer 
-        font-medium
+        font-semibold
         ${type === 'once' 
           ? 'bg-[#393939] text-white border-gray-300' 
           : 'bg-white text-gray-700 border-gray-300'
@@ -39,7 +39,7 @@ const MakeSecureDonation = () => {
         hover:shadow-xl 
         transition-shadow 
         cursor-pointer 
-        font-medium
+        font-semibold
         ${type === 'month' 
           ? 'bg-[#393939] text-white border-gray-300' 
           : 'bg-white text-gray-700 border-gray-300'
@@ -55,7 +55,7 @@ const MakeSecureDonation = () => {
             <div className='rounded-xl border border-gray-300 flex justify-center items-center p-4    '>
                   <img className='h-18 w-18' src='crwd1.svg'/>
             </div>
-            <div className='flex flex-col gap-2 w-[70%]'>
+            <div className='flex flex-col  py-12 gap-2 w-[70%]'>
             <h3 className="text-xl font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
             <p className="text-gray-600 text-sm line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
             </div>
@@ -67,19 +67,22 @@ const MakeSecureDonation = () => {
 
 
          <div className='flex flex-row items-center gap-4  mt-5'>
-             <div onClick={()=>setAmount(5)}  className='bg-[#F3F3F2] cursor-pointer rounded-xl w-14 h-14 flex justify-center items-center'>
+             <div onClick={()=>setAmount(5)}  className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
                     $5
              </div>
-             <div onClick={()=>setAmount(10)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-14 h-14 flex justify-center items-center'>
+             <div onClick={()=>setAmount(10)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
                     $10
              </div>
-             <div onClick={()=>setAmount(15)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-14 h-14 flex justify-center items-center'>
+             <div onClick={()=>setAmount(15)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
                     $15
              </div>
-             <div onClick={()=>setAmount(20)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-14 h-14 flex justify-center items-center'>
+             <div onClick={()=>setAmount(20)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
                     $20
              </div>
-             <div onClick={()=>setAmount(25)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-14 h-14 flex justify-center items-center'>
+             <div onClick={()=>setAmount(25)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
+                    $25
+             </div>
+             <div onClick={()=>setAmount(25)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
                     $25
              </div>
          </div>
