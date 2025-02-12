@@ -22,7 +22,7 @@ const MakeSecureDonation = () => {
         text-nowrap
         md:text-xl
         rounded-full border 
-        hover:shadow-xl 
+        
         transition-shadow 
         cursor-pointer 
         font-semibold
@@ -41,7 +41,7 @@ const MakeSecureDonation = () => {
         text-[14px]
         md:text-xl
         rounded-full border 
-        hover:shadow-xl 
+        
         transition-shadow 
         cursor-pointer 
         font-semibold
@@ -200,7 +200,7 @@ const MakeSecureDonation = () => {
 
         <button
             //  onClick={()=>{setSuccess(true),setActivated(true)}}
-                className="bg-[#393939] mt-5 text-[14px] md:text-xl text rounded-full cursor-pointer text-white py-3 w-full  hover:shadow-xl "
+                className="bg-[#393939] mt-5 text-[14px] md:text-xl text rounded-full cursor-pointer text-white py-3 w-full  "
               >
                 Donate
         </button>
