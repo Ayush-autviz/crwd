@@ -1,12 +1,19 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/src/assets/fonts/Inter_18pt-Regular.ttf') format('woff2');
+  font-family: "Inter";
+  src: url("/src/assets/fonts/Inter_18pt-Regular.ttf") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+}
+.search-icon::before {
+  content: "";
+  background-image: url("../src//assets/images/search.png");
+  width: 30px;
+  height: 30px;
+  display: inline-block;
 }
