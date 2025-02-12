@@ -13,7 +13,7 @@ const MakeSecureDonation = () => {
       <img src="background.png" className="absolute -z-10 w-full h-full inset-0"/>
       <h1 className=" text-2xl md:text-5xl  font-bold text-gray-900 mt-10 mb-10">Make a secure Donation</h1>
 
-      <div className='rounded-2xl p-5 md:p-7 bg-white w-[90%] md:w-[50%] xl:w-[40%]'>
+      <div className='rounded-2xl p-5 md:p-7 bg-white w-[90%] md:w-[65%] xl:w-[40%]'>
 
          <div className='flex flex-row justify-center items-center gap-4'>
          <button onClick={()=>setType('once')}       className={`
@@ -57,10 +57,10 @@ const MakeSecureDonation = () => {
 
 
          <div className='flex flex-col md:flex-row items-center gap-4 mt-5  '>
-            <div className='rounded-xl border border-gray-300 h-[150px] w-full    flex justify-center items-center p-4    '>
+            <div className='rounded-xl border border-gray-300 h-[150px] w-full md:w-[150px]    flex justify-center items-center p-4    '>
                   <img className='h-full w-full'  src='crwd1.svg'/>
             </div>
-            <div className='flex flex-col   gap-2 '>
+            <div className='flex flex-col md:max-w-[60%]   gap-2 '>
             <h3 className="text-2xl  text-center md:text-left font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
             <p className="text-gray-600 text-center md:text-left md:text-[18px] text-[14px] line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
             </div>
