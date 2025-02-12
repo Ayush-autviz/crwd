@@ -14,7 +14,7 @@ const Footer = () => {
     <Divider/>
       </div>
       <div className='w-full    '>
-    <div className='flex flex-col   xl:flex-row gap-4 mx-auto justify-between items-center py-3 max-w-7xl '>
+    <div className='flex flex-col   xl:flex-row gap-4 mx-auto justify-between items-center pb-7 pt-4 px-10 max-w-7xl '>
       <p>Copyright 2025 CRWD Collective</p>
       <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4">
           <a href="/privacy-policy" className="hover:text-gray-400">Privacy Policy</a>
