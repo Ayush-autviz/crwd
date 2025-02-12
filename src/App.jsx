@@ -9,6 +9,7 @@ import MakeSecureDonation from './screens/MakeSecureDonation';
 import Login from './screens/Login';
 import StartCRWD from './screens/StartCRWD';
 import StartCRWD2 from './screens/StartCrwd2';
+import Atlanta from './screens/Atlanta';
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
           <Route path="/nonprofit" element={<NonProfit />} />
           <Route path="/donation" element={<MakeSecureDonation />} />
           <Route path="/login" element={<StartCRWD2 />} />
-          <Route path="/atlanata" element={<Atlanta />} />
+          <Route path="/atlanta" element={<Atlanta />} />
         </Routes>
         <ScrollToTop />
       </Router>
