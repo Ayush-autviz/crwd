@@ -34,29 +34,29 @@ const NonProfitCard = ({item}) => {
   }
   return (
     <div className='rounded-xl p-4  bg-white'>
-        <img src={item.image} className='rounded-xl w-full max-h-[500px] object-contain'/>
+        <img src={item.image} className='rounded-xl w-full md:max-h-[500px] object-cover md:object-contain'/>
         <div className='flex flex-col gap-4 mt-6 items-start'>
         <div className="space-y-2">
-            <h3 className="text-2xl font-semibold text-gray-900">{item.title}</h3>
-            <p className="text-gray-600">{item.desc}</p>
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-900">{item.title}</h3>
+            <p className="text-[12px] md:text-[16px] text-gray-600">{item.desc}</p>
         </div>
         <div className='flex flex-row items-center gap-5 my-4'>
             <div className='flex flex-row items-center gap-2'>
-            <MapPin size={18} />
-            <div>
+            <MapPin className="h-3 w-3 md:h-6 md:w-6" />
+            <div className="text-[12px] md:text-[16px]">
             {item.location}
             </div>
             </div>
 
             <div className='flex flex-row items-center gap-2'>
-            <UserRound size={18} color="#000" />
-            <div>
+            <img src='people.svg' className="h-3 w-3 md:h-6 md:w-6"/>
+            <div  className="text-[12px] md:text-[16px]">
             {item.members} Members
             </div>
             </div>
 
         </div>
-        <button onClick={navigateNonprofit} className="px-8 py-3 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium">
+        <button onClick={navigateNonprofit} className="text-[12px] md:text-[18px] px-4 py-2 md:px-8 md:py-3 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium">
           Donate Now
         </button>
 
