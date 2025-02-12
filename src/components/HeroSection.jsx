@@ -1,6 +1,30 @@
+import { useEffect, useRef, useState } from "react"
 
 
 export default function HeroSection() {
+  const [isSticky, setIsSticky] = useState(false)
+  const buttonRef = useRef(null)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Only set sticky on mobile screens (max-width: 768px)
+        if (window.innerWidth <= 768) {
+          setIsSticky(!entry.isIntersecting)
+        }
+      },
+      { threshold: 0 },
+    )
+
+    if (buttonRef.current) {
+      observer.observe(buttonRef.current)
+    }
+
+    return () => {
+      if (buttonRef.current) {
+        observer.unobserve(buttonRef.current)
+      }
+    }
+  }, [])
   return (
     <div className="relative flex justify-center items-center bg-gradient-to-b from-gray-50 h-[700px] to-white px-4 ">
       <div>
@@ -16,7 +40,7 @@ export default function HeroSection() {
           className="h-[87px] w-[87px]  sm:h-[107px] sm:w-[107px] md:h-[116px] md:w-[116px] xl:h-[126px] xl:w-[126px]"
         />
       </div>
-      <div className="absolute left-[7%] top-[33%]  sm:left-[13%] sm:top-[33%]">
+      <div className="absolute left-[6%] top-[33%]  sm:left-[13%] sm:top-[33%]">
         <img
           src="home2.svg"
  
@@ -46,7 +70,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="absolute right-[7%] xl:right-[15%] bottom-[32%]">
+      <div className="absolute right-[5%] xl:right-[15%] bottom-[32%]">
         <img
           src="home5.svg"
           alt="Group discussion"
@@ -65,22 +89,31 @@ export default function HeroSection() {
         <img
           src="arrowLeft.png"
           alt="Team collaboration"
-          className="w-[60px] sm:w-[80px] md:w-[90px] xl:w-[130px]"
+          className="w-[50px] sm:w-[80px] md:w-[90px] xl:w-[130px]"
         />
       </div>
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col   items-center justify-center  max-w-[60%] mx-auto text-center">
-        <h1 className="text-[30px]  sm:text-[40px] md:text-[50px] lg:text-[70px] font-bold tracking-tight text-gray-900 mb-8">Your World Your Impact</h1>
-        <p className="text-xs md:text-sm lg:text-lg text-gray-600 mb-12 mx-auto ">
+        <h1 className="text-[30px]  sm:text-[40px] md:text-[50px] lg:text-[70px] font-extrabold  text-gray-900 mb-8">Your World Your Impact</h1>
+        <p className="text-xs md:text-sm lg:text-lg text-gray-600 font-semibold mb-12 mx-auto ">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
            ipsa quae  quasi architecto beatae vitae dicta sunt explicabo.
         </p>
-        <button className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
-          <div className="text-nowrap font-[20px] ">Start a</div>
+        <button ref={buttonRef} className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+          <div className="text-nowrap font-black text-[16px] ">Start a</div>
           <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
         </button>
       </div>
+      {
+        isSticky && <div className="w-full shadow-xl fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-white flex justify-center items-center p-4">
+        <button  className="cursor-pointer h-11 w-full items-center px-8 py-1 gap-2 rounded-full flex flex-row justify-center  bg-white text-gray-900 transition-shadow duration-200 border border-black">
+           <div className="text-nowrap font-[20px] ">Start a</div>
+           <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
+         </button>
+       </div>
+      }
+
     </div>
   )
 }

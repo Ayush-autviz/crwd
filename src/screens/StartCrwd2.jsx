@@ -123,11 +123,19 @@ const StartCRWD2 = () => {
             </button>
         </div>
         <div className="my-1 px-[10px] flex w-full  justify-center gap-2 items-center text-[#000]">
-              <hr className="border-[#989898] w-full" />
+              <hr className="border-[#999] w-full" />
+        </div>
+        <div className='my-2 px-3 text-[#393939] text-[20px]'>
+        Create a philanthropy movement powered by your community. It’s  simple: choose a cause, invite friends, and make an impact
         </div>
         </div>
 
 
+        <button
+                className="bg-[#393939] mt-5 text-[20px] rounded-full cursor-pointer text-white py-3 w-full  hover:shadow-xl "
+              >
+                Submit
+            </button>
 
 </div>  
 

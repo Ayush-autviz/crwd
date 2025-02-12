@@ -11,9 +11,9 @@ const CRWDSection = ({ title, description, onClick }) => (
         <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
         <p className="text-gray-600 max-w-2xl">{description}</p>
       </div>
-      <div className="h-8 w-8 bg-[#393939] rounded-full flex justify-center items-center">
+      {/* <div className="h-8 w-8 bg-[#393939] rounded-full flex justify-center items-center">
       <ChevronRight color={"#fff"} />
-      </div>
+      </div> */}
     </div>
   </div>
 );
@@ -41,9 +41,9 @@ const WhatIsCRWD = () => {
         <h1 className="text-4xl font-bold text-gray-900 mb-2">What is CRWD?</h1>
       </div>
 
-          <div className="md:flex">
-            <div className="md:w-3/5 p-8">
-              <div className="space-y-2">
+          <div className="flex mx-auto">
+            <div className=" p-8">
+              <div className="space-y-2 pl-5 flex justify-center   items-center flex-col">
                 {sections.map((section, index) => (
                   <CRWDSection
                     key={index}
@@ -52,15 +52,6 @@ const WhatIsCRWD = () => {
                     onClick={() => console.log(`Clicked ${section.title}`)}
                   />
                 ))}
-              </div>
-            </div>
-            <div className="md:w-2/5 flex justify-center items-center ">
-              <div className="h-[80%] rounded-xl overflow-hidden relative">
-                <img
-                  src="np1.svg"
-                  alt="People collaborating"
-                  className="w-full h-full object-cover"
-                />
               </div>
             </div>
           </div>
