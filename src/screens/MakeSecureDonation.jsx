@@ -13,7 +13,7 @@ const MakeSecureDonation = () => {
       <img src="background.png" className="absolute -z-10 w-full h-full inset-0"/>
       <h1 className=" text-2xl md:text-5xl  font-bold text-gray-900 mt-10 mb-10">Make a secure Donation</h1>
 
-      <div className='rounded-2xl p-5 md:p-7 bg-white w-[90%] md:w-[65%] xl:w-[40%]'>
+      <div className='rounded-2xl p-5 md:p-7 bg-white w-[95%] md:w-[65%] xl:w-[40%]'>
 
          <div className='flex flex-row justify-center items-center gap-4'>
          <button onClick={()=>setType('once')}       className={`
