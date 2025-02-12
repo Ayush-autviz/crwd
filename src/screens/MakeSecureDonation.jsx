@@ -11,13 +11,16 @@ const MakeSecureDonation = () => {
       <Header/>
       <div className='relative  w-full flex justify-center items-center flex-col '>
       <img src="background.png" className="absolute -z-10 w-full h-full inset-0"/>
-      <h1 className="text-4xl font-bold text-gray-900 mt-10 mb-10">Make a secure Donation</h1>
+      <h1 className=" text-2xl md:text-5xl  font-bold text-gray-900 mt-10 mb-10">Make a secure Donation</h1>
 
-      <div className='rounded-2xl p-7 bg-white w-[75%] md:w-[50%] xl:w-[40%]'>
+      <div className='rounded-2xl p-5 md:p-7 bg-white w-[90%] md:w-[50%] xl:w-[40%]'>
 
          <div className='flex flex-row justify-center items-center gap-4'>
          <button onClick={()=>setType('once')}       className={`
         px-8 flex-1 py-3 
+        text-[14px]
+        text-nowrap
+        md:text-xl
         rounded-full border 
         hover:shadow-xl 
         transition-shadow 
@@ -35,6 +38,8 @@ const MakeSecureDonation = () => {
         </button>
         <button onClick={()=>setType('month')}       className={`
         px-8 flex-1 py-3 
+        text-[14px]
+        md:text-xl
         rounded-full border 
         hover:shadow-xl 
         transition-shadow 
@@ -51,12 +56,12 @@ const MakeSecureDonation = () => {
          </div>
 
 
-         <div className='flex flex-row items-center gap-4 mt-5  '>
+         <div className='flex flex-col md:flex-row items-center gap-4 mt-5  '>
             <div className='rounded-xl border border-gray-300 flex justify-center items-center p-4    '>
-                  <img className='h-18 w-18' src='crwd1.svg'/>
+                  <img  src='crwd1.svg'/>
             </div>
-            <div className='flex flex-col  py-12 gap-2 w-[70%]'>
-            <h3 className="text-xl font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
+            <div className='flex flex-col   gap-2 '>
+            <h3 className=" text-xl font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
             <p className="text-gray-600 text-sm line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
             </div>
 
@@ -66,24 +71,24 @@ const MakeSecureDonation = () => {
          
 
 
-         <div className='flex flex-row items-center gap-4  mt-5'>
-             <div onClick={()=>setAmount(5)}  className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
+         <div className='flex flex-row items-center gap-4 flex-wrap  mt-5'>
+             <div onClick={()=>setAmount(5)}  className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5 flex justify-center items-center'>
                     $5
              </div>
-             <div onClick={()=>setAmount(10)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
+             <div onClick={()=>setAmount(10)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
                     $10
              </div>
-             <div onClick={()=>setAmount(15)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
+             <div onClick={()=>setAmount(15)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
                     $15
              </div>
-             <div onClick={()=>setAmount(20)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
+             <div onClick={()=>setAmount(20)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
                     $20
              </div>
-             <div onClick={()=>setAmount(25)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
+             <div onClick={()=>setAmount(25)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5 flex justify-center items-center'>
                     $25
              </div>
-             <div onClick={()=>setAmount(25)} className='bg-[#F3F3F2] cursor-pointer rounded-xl w-[14%] h-[60px] flex justify-center items-center'>
-                    $25
+             <div onClick={()=>setAmount(30)} className='bg-[#F3F3F2] cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
+                    $30
              </div>
          </div>
 
@@ -135,7 +140,7 @@ const MakeSecureDonation = () => {
             paymentMethod === 'credit-debit' &&   <div className="flex flex-col gap-4 mt-4">
             <div className="relative ">
             <input
-                className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                className="w-full text-[14px] md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                 type="text"
                 name="cardNumber"
                 placeholder="Card Number"
@@ -143,21 +148,21 @@ const MakeSecureDonation = () => {
                 // onChange={handleInputChange}
               />
              </div>
-             <div className="relative flex flex-row gap-4 ">
+             <div className="relative flex  flex-row gap-3 ">
                <input
-                 className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                 className="w-full px-4 py-3 text-[14px] md:text-xl  rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                  type="number"
                  name="email"
                  placeholder="MM"
                />
                <input
-                 className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                 className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                  type="number"
                  name="email"
                  placeholder="YY"
                />
                 <input
-                 className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                 className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                  type="text"
                  name="text"
                  placeholder="CVV"
@@ -165,7 +170,7 @@ const MakeSecureDonation = () => {
              </div>
              <div className="relative">
                <input
-                 className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                 className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                  type="text"
                  name="First Name"
                  placeholder="First Name"
@@ -173,7 +178,7 @@ const MakeSecureDonation = () => {
              </div>
              <div className="relative">
                <input
-                 className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                 className="w-full px-4 text-[14px] md:text-xl py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                  type="text"
                  name="Last Name"
                  placeholder="Last Name"
