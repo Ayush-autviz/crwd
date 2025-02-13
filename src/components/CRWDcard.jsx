@@ -14,10 +14,16 @@ const CRWDcard = ({item}) => {
           </div>
           <div className="flex flex-row items-center flex-wrap  gap-6  ">
               <div className='flex flex-row items-center gap-x-2  '>
-              <img className='object-contain h-3 w-3 md:h-6 md:w-6'  src='people.svg' />
+            
                <div className='flex flex-row items-center  '>               
                 <span className='text-[12px] md:text-[18px] text-nowrap font-[700px] '> {item.memberCount}  Members</span> 
                </div>
+               <div class="flex -space-x-3 md:-space-x-4 rtl:space-x-reverse">
+    <img class="w-5 h-5 md:w-7  md:h-7 border border-white rounded-full " src="home1.svg" />
+    <img class="w-5 h-5 md:w-7  md:h-7 border border-white rounded-full " src="home1.svg" />
+    <img class="w-5 h-5 md:w-7  md:h-7 border border-white rounded-full " src="home1.svg" />
+    <img class="w-5 h-5 md:w-7  md:h-7 border border-white rounded-full " src="home1.svg" />
+</div>
               </div>
           </div>
         </div>

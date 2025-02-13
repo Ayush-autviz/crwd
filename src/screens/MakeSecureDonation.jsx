@@ -58,7 +58,7 @@ const MakeSecureDonation = () => {
 
 
          <div className='flex flex-col md:flex-row items-center gap-4 mt-5  '>
-            <div className='rounded-xl border border-gray-300 h-[150px] w-full md:w-[150px]    flex justify-center items-center p-4    '>
+            <div className='rounded-xl border border-gray-300 h-[100px] w-full md:w-[150px]    flex justify-center items-center p-4    '>
                   <img className='h-full w-full'  src='crwd1.svg'/>
             </div>
             <div className='flex flex-col md:max-w-[60%]   gap-2 '>

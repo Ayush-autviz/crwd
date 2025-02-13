@@ -87,7 +87,7 @@ const NonProfit = () => {
               <hr className="border-[#989898] w-full" />
         </div>
 
-        <div className='flex flex-col max-w-[80%] justify-center mx-auto items-center  gap-5 px-6 my-10'>
+        <div className='flex flex-col w-[100%] md:max-w-[80%] justify-center mx-auto items-center  gap-5 px-6 my-10'>
           <div className='text-[18px] font-semibold'>
                  About american Red Cross
           </div>
