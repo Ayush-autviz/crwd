@@ -2,18 +2,17 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div className='h-screen  relative flex justify-center items-center'>
-        <img src='authbg.svg' className='h-full -z-10 w-full absolute inset-0'/>
-        <div className='bg-white shadow-xl rounded-2xl px-4 py-6 md:p-10 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
+    <div className='h-screen  relative flex justify-center items-center bg-[url(authbg.svg)] bg-cover bg-no-repeat'>
+        <div className='bg-white shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:p-10 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
             <img src='crwd.png' className='h-8 sm:h-9 md:h-10'/>
-            <div className='text-[18px]  sm:text-2xl md:text-3xl font-semibold mt-7'>Welcome</div>
-            <div className='text-[#393939] text-[14px]  sm:text-xl md:text-2xl font-semibold'>Log in to CRWD to continue</div>
-            <button className="bg-white border py-2 w-full rounded-full mt-6 flex gap-2 justify-center items-center text-[#393939] text-[18px]  sm:text-2xl md:text-3xl ">
+            <div className='text-[18px]  mb-1 sm:text-2xl md:text-3xl font-semibold mt-7 text-[#373737]'>Welcome</div>
+            <div className='text-[#393939] text-[12px] md:text-[16px]'>Log in to CRWD to continue</div>
+            <button className="bg-white border border-[#989898] py-2 md:py-4 w-full rounded-full mt-6 flex gap-2 justify-center items-center text-[#393939] text-[12px]  md:text-[16px] ">
                 <svg
                   className=""
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 48 48"
-                  width="28px"
+                  width="24px"
                 >
                   <path
                     fill="#FFC107"
@@ -32,26 +31,26 @@ const Login = () => {
                     d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
                   />
                 </svg>
-                Login with Google
+                Continue With Google
             </button>
             <div className="mt-6 flex w-full  justify-center gap-2 items-center text-[#000]">
               <hr className="border-[#989898] w-full" />
-              <p className="text-center text-[14px]  sm:text-xl md:text-2xl ">OR</p>
-              <hr className="border-[#98989] w-full" />
+              <p className="text-[#393939] text-center text-[12px]  md:text-[16px] ">OR</p>
+              <hr className="border-[#989898] w-full" />
             </div>
             <input
-                className="w-full px-4 mt-5 py-2 text-[18px]  sm:text-2xl md:text-3xl rounded-full border  focus:outline-none "
+                className="w-full px-4 mt-5 py-3 md:py-4 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none "
                 type="text"
                 name="cardNumber"
                 placeholder="Email Address"
             />
             <button
-                className="bg-[#393939] mt-5 text-[18px]  sm:text-2xl md:text-3xl  rounded-full cursor-pointer text-white py-3 w-full  hover:shadow-xl "
+                className="bg-[#393939] mt-5 text-[12px] md:text-[16px]  rounded-full cursor-pointer text-white py-3 md:py-4 w-full  hover:shadow-xl"
               >
                 Continue
             </button>
-            <div className='text-[#393939] text-[14px]  sm:text-xl md:text-2xl font-semibold mt-5'>
-            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+            <div className='text-[#393939] text-[12px] md:text-[16px] mt-6'>
+            This site is protected by reCAPTCHA and the Google <a>Privacy Policy</a> and <a>Terms of Service </a> apply.
             </div>
         </div>
     </div>

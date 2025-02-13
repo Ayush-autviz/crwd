@@ -6,11 +6,11 @@ const exportIcon = <svg width="26" height="25" viewBox="0 0 26 25" fill="none" x
 export default function HeroImage({ img, title, content }) {
     return (
         <>
-            <div className={`w-full bg-[url('${img}')] bg-cover bg-center md:py-[107px]`} >
+            <div className={`w-full bg-[url(background.png)] bg-cover bg-center md:py-[50px] md:pt-[100px]`} >
                 <div className="px-4 py-10 md:px-10 lg:px-20">
                     {/* Hero Section UI */}
-                    <h1 className="font-semibold text-center text-[28px] md:leading-16 md:text-6xl md:mb-8">{title}</h1>
-                    <p className="text-center text-sm w-full md:w-[86%] md:text-xl leading-6 font-normal mx-auto">{content}</p>
+                    <h1 className="text-2xl text-center md:text-5xl font-bold text-[#393939] mb-2">{title}</h1>
+                    <p className="text-center md:w-[86%] md:text-xl paragraph mx-auto">{content}</p>
 
                     {/* img section */}
                     <div className="mt-[30px] md:mt-[50px]">
@@ -19,13 +19,13 @@ export default function HeroImage({ img, title, content }) {
 
                     {/* button section */}
                     <div className="mt-[30px] md:mt-[60px] w-fit mx-auto flex gap-4 justify-center items-center">
-                        <button className="flex items-center gap-2 px-4 py-2 md:px-8 md:py-4 md:text-xl font-bold bg-white border rounded-full hover:shadow-xl transition-shadow ">
-                            Start a <img src="/logo.png" alt="..." className="w-[47.12px] md:w-auto " />
+                        <button className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black  text-nowrap font-bold text-[16px]">
+                            Start a <img src="/logo.png" alt="..." className="h-[13px] ms-[-3px] object-contain" />
                         </button>
-                        <button className="flex items-center px-4 py-2 md:px-8 md:py-4 text-sm md:text-xl font-bold bg-white border rounded-full hover:shadow-xl transition-shadow ">
+                        <button className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black  text-nowrap font-bold text-[16px]">
                             Donate Now
                         </button>
-                        <button className="shareBtns flex items-center px-4 py-2 md:px-8 md:py-4 text-sm md:text-xl font-bold bg-white border rounded-full hover:shadow-xl transition-shadow ">
+                        <button className="shareBtns flex items-center px-4 py-1 md:px-8 md:py-2.5 text-sm md:text-xl font-bold bg-white border rounded-full  transition-shadow ">
                             {exportIcon}
                         </button>
                     </div>

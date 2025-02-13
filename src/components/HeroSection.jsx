@@ -101,7 +101,7 @@ export default function HeroSection() {
            ipsa quae  quasi architecto beatae vitae dicta sunt explicabo.
         </p>
         <button ref={buttonRef} className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
-          <div className="text-nowrap font-black text-[16px] ">Start a</div>
+          <div className="text-nowrap font-bold text-[16px] ">Start a</div>
           <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
         </button>
       </div>

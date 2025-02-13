@@ -9,7 +9,7 @@ const CRWDSection = ({ title, description, onClick }) => (
     <div className="flex items-center justify-between">
       <div className="space-y-1 w-[100%]">
         <h2 className="text-center md:text-left text-xl font-semibold text-gray-800">{title}</h2>
-        <p className="text-center md:text-left  text-gray-600 ">{description}</p>
+        <p className="paragraph text-center  ">{description}</p>
       </div>
       {/* <div className="h-8 w-8 bg-[#393939] rounded-full flex justify-center items-center">
       <ChevronRight color={"#fff"} />
