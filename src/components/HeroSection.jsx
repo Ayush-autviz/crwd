@@ -106,7 +106,7 @@ export default function HeroSection() {
         </button>
       </div>
       {
-        isSticky && <div className="w-full shadow-xl fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-white flex justify-center items-center p-4">
+        isSticky && <div className="w-full md:hidden shadow-xl fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-white flex justify-center items-center p-4">
         <button  className="cursor-pointer h-11 w-full items-center px-8 py-1 gap-2 rounded-full flex flex-row justify-center  bg-white text-gray-900 transition-shadow duration-200 border border-black">
            <div className="text-nowrap font-[20px] ">Start a</div>
            <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>

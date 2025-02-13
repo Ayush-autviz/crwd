@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
-import { Share } from 'lucide-react'
+import { MapPin, Share } from 'lucide-react'
 import Slider from '../components/Slider'
 import Footer from '../components/Footer'
 
@@ -8,7 +8,7 @@ const NonProfit = () => {
   return (
     <div className='mt-[70px]'>
         <Header/>
-        <div className='flex-1 px-2'>
+        <div className='flex-1 '>
         <div className='h-25 bg-[#616161] relative'>
                <div className='absolute top-[100%] shadow-xl left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24 bg-white p-5 rounded-full flex justify-center items-center'>
                     <img className='h-14 w-14' src='crwd2.svg'/>
@@ -33,16 +33,16 @@ const NonProfit = () => {
 
         <div className='flex  px-2 justify-center items-center my-10  flex-wrap flex-row gap-5'>
 
-        <button  className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row justify-center  bg-white text-gray-900 transition-shadow duration-200 border border-black">
-           <div className="text-nowrap font-[20px] ">Start a</div>
+        <button  className="cursor-pointer h-11 w-full md:w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row justify-center  bg-white text-gray-900 transition-shadow duration-200 border border-black">
+           <div className="text-nowrap  font-black text-[16px] ">Start a</div>
            <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
          </button>
         
-        <button className="font-[20px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+        <button className="font-black text-[16px] justify-center  items-center flex-1 md:flex-none md:w-fit   cursor-pointer h-11 w-fit  px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
           Donate Now
         </button>
 
-        <button className="font-[20px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+        <button className="font-black text-[16px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
            <Share />
         </button>
 
@@ -82,6 +82,57 @@ const NonProfit = () => {
         </div>
 
         <Slider/>
+
+        <div className="mt-6 flex w-[80%] mx-auto  justify-center gap-2 items-center text-[#000]">
+              <hr className="border-[#989898] w-full" />
+        </div>
+
+        <div className='flex flex-col max-w-[80%] justify-center mx-auto items-center  gap-5 px-6 my-10'>
+          <div className='text-[18px] font-semibold'>
+                 About american Red Cross
+          </div>
+          <img className='h-15 w-15' src='crwd2.svg'/>
+          <div className='flex flex-col gap-1 text-center'>
+            <div className='text-[18px] text-center font-semibold'>
+                 Causes
+            </div>
+            <div className='text-[17px] text-center text-[#373737] font-light'>
+                Disaster and Emergency mangemet,Blood banks,Safety Education
+            </div>
+          </div>
+
+          <div className='flex flex-col gap-1 text-center'>
+            <div className='text-[18px] text-center font-semibold'>
+                 Established
+            </div>
+            <div className='text-[17px] text-center text-[#373737] font-light'>
+                1938
+            </div>
+          </div>
+
+          <div className='flex flex-col gap-1'>
+            <div className='text-[18px] font-semibold'>
+                 Verified on crwd
+            </div>
+            <div className='text-[17px] text-center text-[#373737] font-light'>
+                2005
+            </div>
+          </div>
+
+          <div className='flex flex-col items-center gap-1'>
+
+          <div className='text-[18px] font-semibold'>
+          <MapPin className="h-5 w-5" />
+            </div>
+            
+            <div className='text-[17px] text-center text-[#373737] font-light'>
+            PO Box 37839 Boone IA 50037 US
+            </div>
+          </div>
+
+        </div>
+
+
         </div>
         <Footer/>
 

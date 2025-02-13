@@ -10,6 +10,7 @@ import Login from './screens/Login';
 import StartCRWD from './screens/StartCRWD';
 import StartCRWD2 from './screens/StartCrwd2';
 import Atlanta from './screens/Atlanta';
+import SignUp from './screens/SignUp';
 
 const App = () => {
   return (
@@ -19,7 +20,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/nonprofit" element={<NonProfit />} />
           <Route path="/donation" element={<MakeSecureDonation />} />
-          <Route path="/login" element={<StartCRWD2 />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/start" element={<StartCRWD />} />
+          <Route path="/start." element={<StartCRWD2 />} />
           <Route path="/atlanta" element={<Atlanta />} />
         </Routes>
         <ScrollToTop />

@@ -4,11 +4,11 @@ const Login = () => {
   return (
     <div className='h-screen  relative flex justify-center items-center'>
         <img src='authbg.svg' className='h-full -z-10 w-full absolute inset-0'/>
-        <div className='bg-white shadow-xl rounded-2xl p-10 flex flex-col justify-center items-center w-[50%] md:w-[30%]'>
-            <img src='crwd.png' className='h-10'/>
-            <div className='text-[40px] font-semibold mt-7'>Welcome</div>
-            <div className='text-[#393939] text-[20px]'>Log in to CRWD to continue</div>
-            <button className="bg-white border py-2 w-full rounded-full mt-6 flex gap-2 justify-center items-center text-[#393939] text-[20px] ">
+        <div className='bg-white shadow-xl rounded-2xl px-4 py-6 md:p-10 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
+            <img src='crwd.png' className='h-8 sm:h-9 md:h-10'/>
+            <div className='text-[18px]  sm:text-2xl md:text-3xl font-semibold mt-7'>Welcome</div>
+            <div className='text-[#393939] text-[14px]  sm:text-xl md:text-2xl font-semibold'>Log in to CRWD to continue</div>
+            <button className="bg-white border py-2 w-full rounded-full mt-6 flex gap-2 justify-center items-center text-[#393939] text-[18px]  sm:text-2xl md:text-3xl ">
                 <svg
                   className=""
                   xmlns="http://www.w3.org/2000/svg"
@@ -34,36 +34,26 @@ const Login = () => {
                 </svg>
                 Login with Google
             </button>
-
             <div className="mt-6 flex w-full  justify-center gap-2 items-center text-[#000]">
               <hr className="border-[#989898] w-full" />
-              <p className="text-center text-sm ">OR</p>
+              <p className="text-center text-[14px]  sm:text-xl md:text-2xl ">OR</p>
               <hr className="border-[#98989] w-full" />
             </div>
-
             <input
-                className="w-full px-4 mt-5 py-2 text-[20px] rounded-full border  focus:outline-none "
+                className="w-full px-4 mt-5 py-2 text-[18px]  sm:text-2xl md:text-3xl rounded-full border  focus:outline-none "
                 type="text"
                 name="cardNumber"
                 placeholder="Email Address"
             />
-
             <button
-                className="bg-[#393939] mt-5 text-[20px] rounded-full cursor-pointer text-white py-3 w-full  hover:shadow-xl "
+                className="bg-[#393939] mt-5 text-[18px]  sm:text-2xl md:text-3xl  rounded-full cursor-pointer text-white py-3 w-full  hover:shadow-xl "
               >
                 Continue
             </button>
-
-            <div className='text-[#393939] text-[16px] font-normal mt-5'>
+            <div className='text-[#393939] text-[14px]  sm:text-xl md:text-2xl font-semibold mt-5'>
             This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
             </div>
-
-
-
-
-
         </div>
-      
     </div>
   )
 }

@@ -62,7 +62,6 @@ const MakeSecureDonation = () => {
             </div>
             <div className='flex flex-col md:max-w-[60%]   gap-2 '>
             <h3 className="text-2xl  text-center md:text-left font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
-            <p className="text-gray-600 text-center md:text-left md:text-[18px] text-[14px] line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
             </div>
 
          </div>
@@ -210,7 +209,6 @@ const MakeSecureDonation = () => {
       </div>
 
       </div>
-      <Footer/>
     </div>
   )
 }
