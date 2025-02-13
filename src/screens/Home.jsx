@@ -8,9 +8,10 @@ import Footer from '../components/Footer'
 import HowCRWD from '../components/HowCRWD'
 import Frame from '../components/Frame'
 
+
 const Home = () => {
   return (
-    <div className='mt-[70px]'>   
+    <div className='mt-[70px] '>   
    <Header/>
    <HeroSection/>
    <FindCRWD/>
