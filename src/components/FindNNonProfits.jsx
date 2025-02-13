@@ -47,7 +47,7 @@ const FindNNonProfits = () => {
       </div>
 
       <div className="flex justify-center mt-12">
-        <button className="px-8 py-3 rounded-full border hover:shadow-xl transition-shadow cursor-pointer  border-gray-300 text-gray-700 hover:text-gray-900 font-medium">
+        <button className="px-8 py-3 rounded-full border hover:shadow-xl transition-shadow cursor-pointer   text-gray-700 hover:text-gray-900 font-medium">
           See more
         </button>
       </div>
