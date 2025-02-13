@@ -71,7 +71,7 @@ const MakeSecureDonation = () => {
           type === 'once' ? (
             <h3 className=" text-[17px] md:text-xl font-semibold text-gray-900 mt-5">Choose an amount for 1-time donation</h3>
           ) : (
-            <h3 className="text-[17px] text-xl font-semibold text-gray-900 mt-5">Choose an amount for recurring donation</h3>
+            <h3 className="text-[17px] md:text-xl font-semibold text-gray-900 mt-5">Choose an amount for recurring donation</h3>
           )
          }
 
