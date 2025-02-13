@@ -49,6 +49,7 @@ const StartCRWD = () => {
             }
           </div>
           <button
+           onClick={()=>{navigation("/start.")}}
             className="bg-[#393939] mt-5 text-[12px] md:text-[16px]  rounded-full cursor-pointer text-white py-3 md:py-4 w-full  hover:shadow-xl"
           >
             Continue

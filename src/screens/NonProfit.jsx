@@ -3,8 +3,10 @@ import Header from '../components/Header'
 import { MapPin, Share } from 'lucide-react'
 import Slider from '../components/Slider'
 import Footer from '../components/Footer'
+import { useNavigate } from 'react-router-dom'
 
 const NonProfit = () => {
+  const navigation = useNavigate();
   return (
     <div className='mt-[70px]'>
         <Header/>

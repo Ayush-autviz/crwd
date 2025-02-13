@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 
 export default function HeroSection() {
   const [isSticky, setIsSticky] = useState(false)
   const buttonRef = useRef(null)
+  const navigation = useNavigate();
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -100,14 +102,14 @@ export default function HeroSection() {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
            ipsa quae  quasi architecto beatae vitae dicta sunt explicabo.
         </p>
-        <button ref={buttonRef} className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+        <button onClick={()=>{navigation('/start')}} ref={buttonRef} className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
           <div className="text-nowrap font-bold text-[16px] ">Start a</div>
           <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
         </button>
       </div>
       {
         isSticky && <div className="w-full md:hidden shadow-xl fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-white flex justify-center items-center p-4">
-        <button  className="cursor-pointer h-11 w-full items-center px-8 py-1 gap-2 rounded-full flex flex-row justify-center  bg-white text-gray-900 transition-shadow duration-200 border border-black">
+        <button onClick={()=>{navigation('/start')}}  className="cursor-pointer h-11 w-full items-center px-8 py-1 gap-2 rounded-full flex flex-row justify-center  bg-white text-gray-900 transition-shadow duration-200 border border-black">
            <div className="text-nowrap font-[20px] ">Start a</div>
            <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
          </button>
