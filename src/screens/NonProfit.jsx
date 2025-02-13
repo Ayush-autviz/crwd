@@ -33,7 +33,7 @@ const NonProfit = () => {
 
         <div className='flex  px-2 justify-center items-center my-10  flex-wrap flex-row gap-5'>
 
-        <button  className="cursor-pointer h-11 w-full md:w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row justify-center  bg-white text-gray-900 transition-shadow duration-200 border border-black">
+        <button onClick={()=>{navigation('/start')}}  className="cursor-pointer h-11 w-full md:w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row justify-center  bg-white text-gray-900 transition-shadow duration-200 border border-black">
            <div className="text-nowrap  font-black text-[16px] ">Start a</div>
            <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
          </button>

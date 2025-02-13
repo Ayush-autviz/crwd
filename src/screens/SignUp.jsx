@@ -1,8 +1,10 @@
 import { Eye, EyeOff } from 'lucide-react'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
+    const navigation = useNavigate();
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword)
@@ -12,7 +14,7 @@ const Login = () => {
             <div className='bg-white  shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:p-10 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
                 <img src='crwd.png' className='h-8 sm:h-9 md:h-10' />
                 <div className='text-[18px]  mb-1 sm:text-2xl md:text-3xl font-semibold mt-7 text-[#373737]'>Create an account</div>
-                <div className='text-[#393939] text-[12px] md:text-[16px]'>Already have an account? <span className='underlinne cursor pointer'>Sign in</span> </div>
+                <div className='text-[#393939] text-[12px] md:text-[16px]'>Already have an account? <span onClick={()=>{navigation('/login')}} className='underline cursor-pointer'>Sign in</span> </div>
                 <input
                     className="w-full px-4 mt-5 py-3 md:py-4 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none"
                     type="text"

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const StartCRWD = () => {
   const [other, setOther] = useState(false);
+  const navigation = useNavigate();
   return (
     <div className='h-screen  relative flex justify-center items-center bg-[url(authbg.svg)] bg-cover bg-no-repeat'>
       <img src='authbg.svg' className='h-full -z-10 w-full absolute inset-0' />

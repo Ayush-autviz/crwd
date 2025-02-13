@@ -7,6 +7,7 @@ const Login = () => {
             <img src='crwd.png' className='h-8 sm:h-9 md:h-10'/>
             <div className='text-[18px]  mb-1 sm:text-2xl md:text-3xl font-semibold mt-7 text-[#373737]'>Welcome</div>
             <div className='text-[#393939] text-[12px] md:text-[16px]'>Log in to CRWD to continue</div>
+
             <button className="bg-white border border-[#989898] py-2 md:py-4 w-full rounded-full mt-6 flex gap-2 justify-center items-center text-[#393939] text-[12px]  md:text-[16px] ">
                 <svg
                   className=""
@@ -49,6 +50,7 @@ const Login = () => {
               >
                 Continue
             </button>
+            <div className='text-[#393939] text-[12px] md:text-[16px] mt-4'>Don't have an account? <span onClick={()=>{navigation('/signup')}} className='underline cursor-pointer'>Sign up</span> </div>
             <div className='text-[#393939] text-[12px] md:text-[16px] mt-6'>
             This site is protected by reCAPTCHA and the Google <a>Privacy Policy</a> and <a>Terms of Service </a> apply.
             </div>

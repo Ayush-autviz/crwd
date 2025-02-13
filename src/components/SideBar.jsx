@@ -1,6 +1,9 @@
 import { ChevronRight, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ isOpen, onClose }) => {
+  const navigation = useNavigate();
+
   return (
     <>
       {/* Backdrop for blur effect */}
@@ -49,11 +52,11 @@ const Sidebar = ({ isOpen, onClose }) => {
               <ChevronRight />
             </div>
             <div className="flex justify-center  items-center">
-              <div className="px-10 py-1 h-11 w-full bg-[#393939] flex justify-center  items-center text-white border cursor-pointer rounded-full   transition-shadow">
+              <div onClick={()=>{navigation('/login')}} className="px-10 py-1 h-11 w-full bg-[#393939] flex justify-center  items-center text-white border cursor-pointer rounded-full   transition-shadow">
                 Sign in
               </div>
             </div>
-            <button  className="cursor-pointer justify-center h-11 w-full items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+            <button onClick={()=>{navigation('/start')}}  className="cursor-pointer justify-center h-11 w-full items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
               <div className="text-nowrap font-black text-[16px] ">Start a</div>
               <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
             </button>
