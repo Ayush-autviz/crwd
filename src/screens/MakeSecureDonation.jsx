@@ -3,8 +3,9 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const MakeSecureDonation = () => {
+  const amounts = [5, 10, 15, 20, 25];
   const [paymentMethod, setPaymentMethod] = useState('apple-pay');
-  const [amount,setAmount] = useState(null);
+  const [amount,setAmount] = useState(5);
   const [type,setType] = useState('once');
   return (
     <div className='mt-[70px]'>
@@ -75,26 +76,21 @@ const MakeSecureDonation = () => {
          }
 
 
-         <div className='flex flex-row items-center gap-4 flex-wrap  mt-5'>
-             <div onClick={()=>setAmount(5)}  className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5 flex justify-center items-center'>
-                    $5
-             </div>
-             <div onClick={()=>setAmount(10)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
-                    $10
-             </div>
-             <div onClick={()=>setAmount(15)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
-                    $15
-             </div>
-             <div onClick={()=>setAmount(20)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
-                    $20
-             </div>
-             <div onClick={()=>setAmount(25)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5 flex justify-center items-center'>
-                    $25
-             </div>
-             <div onClick={()=>setAmount(30)} className='bg-[#F3F3F2] text-[14px] md:text-lg cursor-pointer rounded-xl py-4 px-5  flex justify-center items-center'>
-                    $30
-             </div>
-         </div>
+<div className="flex flex-wrap gap-2 mt-5">
+    {amounts.map((amoun) => (
+      <div
+        key={amoun}
+        onClick={() => setAmount(amoun)}
+        className={`
+          cursor-pointer rounded-xl py-4 px-5 flex justify-center items-center
+          text-[14px] md:text-lg
+          ${amoun === amount ? 'bg-[#393939] text-white' : 'bg-[#F3F3F2]'}
+        `}
+      >
+        ${amoun}
+      </div>
+    ))}
+  </div>
 
          <div className="mt-6">
         <input 
@@ -195,6 +191,16 @@ const MakeSecureDonation = () => {
 
         </div>
 
+        {
+          type === 'month' && (
+            <div className='text-[12px] mt-4'>
+            By choosing the payment method above, you agree to a recurring monthly charge of until it is canceled by you or us as per our Terms.
+            </div>
+          )
+        }
+
+
+
 
 
         <button
@@ -203,6 +209,10 @@ const MakeSecureDonation = () => {
               >
                 Donate
         </button>
+
+        <div className='text-[12px] mt-4'>
+        Your donation is tax deductible to the fullest extent of the law. Grapevine charges no donation fees, but our payment processor charges a discounted 2.2% + 30¢ credit and debit card fee (3.5% for AmEx and +1% for non-US cards), or 0.8% up to $5 for bank transfers.
+        </div>
 
 
 
