@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const MakeSecureDonation = () => {
-  const amounts = [5, 10, 15, 20, 25];
+  const amounts = [5, 10, 15, 20, 25,30];
   const [paymentMethod, setPaymentMethod] = useState('apple-pay');
   const [amount,setAmount] = useState(5);
   const [type,setType] = useState('once');
@@ -76,7 +76,7 @@ const MakeSecureDonation = () => {
          }
 
 
-<div className="flex flex-wrap gap-2 mt-5">
+<div className="grid grid-cols-3 gap-2 mt-5">
     {amounts.map((amoun) => (
       <div
         key={amoun}
@@ -193,7 +193,7 @@ const MakeSecureDonation = () => {
 
         {
           type === 'month' && (
-            <div className='text-[12px] mt-4'>
+            <div className='text-[12px] mt-4 px-2 '>
             By choosing the payment method above, you agree to a recurring monthly charge of until it is canceled by you or us as per our Terms.
             </div>
           )
@@ -210,12 +210,15 @@ const MakeSecureDonation = () => {
                 Donate
         </button>
 
-        <div className='text-[12px] mt-4'>
+        <div className='text-[12px] mt-4 px-2'>
         Your donation is tax deductible to the fullest extent of the law. Grapevine charges no donation fees, but our payment processor charges a discounted 2.2% + 30¢ credit and debit card fee (3.5% for AmEx and +1% for non-US cards), or 0.8% up to $5 for bank transfers.
         </div>
 
 
 
+      </div>
+      <div className='w-full mt-15 h-10  flex justify-center items-center py-20  bg-[#E4E4E4] '>
+            <img src='crwdC.svg' className='h-12 w-12'/>
       </div>
 
       </div>
