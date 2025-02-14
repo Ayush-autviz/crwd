@@ -9,11 +9,7 @@ import About from '../components/AboutUsCard'
 const NonProfit = () => {
   const navigation = useNavigate();
   const richColors = [
-    "#F7194E",
-    "#0C00FF",
-    "#A7FF4E",
-    "#932CFF",
-    "#393939"
+    "#FF96AF", "#8B85FF", "#D4FFA8", "#CE9EFF", "#BDBDBD"
 ];
 
   const [currentColor, setCurrentColor] = useState(richColors[0]);
