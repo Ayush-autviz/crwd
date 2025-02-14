@@ -15,10 +15,10 @@ const About = () => {
 
         {/* Mission Statement */}
         <div className="bg-[#F3F3F2] p-4 rounded-lg mb-8">
-          <h3 className="text-lg font-semibold  mb-2 flex items-center">
-            <Shield className="w-5 h-5 mr-2" /> Our Mission
+          <h3 className="text-lg font-semibold  mb-2 flex items-center justify-center md:justify-start text-center md:text-left">
+            <Shield className="w-5 h-5 mr-2 " /> Our Mission
           </h3>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-center md:text-left">
             The American Red Cross prevents and alleviates human suffering in the face of emergencies by mobilizing the power of volunteers and the generosity of donors.
           </p>
         </div>
