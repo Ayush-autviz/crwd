@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Header2 from '../components/Header2';
 
 const MakeSecureDonation = () => {
   const amounts = [5, 10, 15, 20, 25,30];
@@ -9,10 +10,14 @@ const MakeSecureDonation = () => {
   const [type,setType] = useState('once');
   return (
     <div className='mt-[70px]'>
-      <Header/>
+      <Header2/>
       <div className='relative  w-full flex justify-center items-center flex-col '>
       <img src="background.png" className="absolute -z-10 w-full h-full inset-0"/>
-      <h1 className=" text-2xl md:text-5xl  font-bold text-gray-900 mt-10 mb-10">Make a secure Donation</h1>
+      <div className='flex flex-col justify-center items-center gap-4 '>
+      <h1 className=" text-xl md:text-3xl  font-bold text-gray-900 mt-10 ">Choose your donation amount for</h1>
+      <img src='crwd1.svg' className='h-25 w-25'/>
+      <h1 className=" text-xl md:text-3xl  font-bold text-gray-900 mb-10">Unicef USA</h1>
+      </div>
 
       <div className='rounded-2xl p-5 md:p-7 bg-white w-[95%] md:w-[65%] xl:w-[40%]'>
 
@@ -57,7 +62,7 @@ const MakeSecureDonation = () => {
          </div>
 
 
-         <div className='flex flex-col md:flex-row items-center gap-4 mt-5  '>
+         {/* <div className='flex flex-col md:flex-row items-center gap-4 mt-5  '>
             <div className='rounded-xl border border-gray-300 h-[100px] w-full md:w-[150px]    flex justify-center items-center p-4    '>
                   <img className='h-full w-full'  src='crwd1.svg'/>
             </div>
@@ -65,7 +70,7 @@ const MakeSecureDonation = () => {
             <h3 className="text-2xl  text-center md:text-left font-semibold text-gray-900 line-clamp-2">You’re supporting Unicef USA</h3>
             </div>
 
-         </div>
+         </div> */}
 
          {
           type === 'once' ? (
@@ -97,8 +102,8 @@ const MakeSecureDonation = () => {
           type="text"
           value={amount}
           onChange={(e)=>{setAmount(e.target.value)}}
-          placeholder="USD $"
-          className="w-full text-[14px] md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+          placeholder="$ Choose a donation amount"
+          className="w-full text-[14px] font-semibold md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
         />
         </div>
 
@@ -138,17 +143,48 @@ const MakeSecureDonation = () => {
             </label>
         {
             paymentMethod === 'credit-debit' &&   <div className="flex flex-col gap-4 mt-4">
-            <div className="relative ">
+
+<div className="relative ">
             <input
                 className="w-full text-[14px] md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                 type="text"
-                name="cardNumber"
-                placeholder="Card Number"
+                name="Email"
+                placeholder="Email address"
                 // value={cardNumber}
                 // onChange={handleInputChange}
               />
              </div>
+            
+            <div className="relative ">
+            <input
+                className="w-full text-[14px] md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                type="text"
+                name="First Name"
+                placeholder="First Name"
+                // value={cardNumber}
+                // onChange={handleInputChange}
+              />
+             </div>
+
+             <div className="relative ">
+            <input
+                className="w-full text-[14px] md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                type="text"
+                name="Last Name"
+                placeholder="Last Name"
+                // value={cardNumber}
+                // onChange={handleInputChange}
+              />
+             </div>
+             <div className="flex items-center gap-2 pl-3 ">
+                            <input
+                                type="checkbox"
+                                className="w-[18px] h-[18px] rounded-[5px] border-2 border-[#393939]  accent-[#393939]"
+                            />
+                            <div className="text-[15px] md:text-lg">Use as billing name</div>
+                        </div>
              <div className="relative flex  flex-row gap-3 ">
+
                <input
                  className="w-full px-4 py-3 text-[14px] md:text-xl  rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                  type="number"
@@ -168,20 +204,29 @@ const MakeSecureDonation = () => {
                  placeholder="CVV"
                />
              </div>
+
              <div className="relative">
                <input
                  className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                  type="text"
-                 name="First Name"
-                 placeholder="First Name"
+                 name="Name on card"
+                 placeholder="Name on card"
                />
              </div>
              <div className="relative">
                <input
                  className="w-full px-4 text-[14px] md:text-xl py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                  type="text"
-                 name="Last Name"
-                 placeholder="Last Name"
+                 name="Country"
+                 placeholder="Country"
+               />
+             </div>
+             <div className="relative">
+               <input
+                 className="w-full px-4 text-[14px] md:text-xl py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                 type="text"
+                 name="Postal Code"
+                 placeholder="Postal Code"
                />
              </div>
         

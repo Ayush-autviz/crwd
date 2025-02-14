@@ -19,7 +19,7 @@ export default function ReviewCards() {
         <>
             <div className="px-4 md:px-10 lg:px-20">
                 <div className="py-10 md:py-[130px]">
-                    <h1 className="font-semibold text-center leading-16 text-xl text-[#393939] md:text-6xl">Join The Discussion</h1>
+                    <h1 className="font-semibold text-center leading-16 text-2xl text-[#393939] md:text-5xl">Join The Discussion</h1>
 
                     <div className="mt-5 md:mt-[50px]">
 
@@ -32,45 +32,48 @@ export default function ReviewCards() {
                             <div className="bg-[#F8F8F8] p-[14px] rounded-[10px] md:p-[30px] w-full md:rounded-[20px]">
                                 {/* commented container */}
                                 <div className="border-b border-[#999999]">
-                                    <h4 className="text-[#373737] text-base md:text-3xl font-semibold mb-6">Larry Hudlemeyer</h4>
+                                    <h4 className="text-[#373737] text-[18px] md:text-2xl font-semibold mb-6">Larry Hudlemeyer</h4>
                                     <div className="content is here">
-                                        <span className="block w-full text-[#5E5E5E] text-[10px] md:text-base font-medium">
+                                        <span className="block w-full text-[#5E5E5E] text-[12px] md:text-[14px] font-medium">
                                             " Creating Opportunities for those who serve"
                                         </span>
 
-                                        <span className="mb-4 block w-full text-[#3A3A3A] text-[10px] md:text-base font-medium">
+                                        <span className="mb-4 block w-full text-[#3A3A3A] ext-[12px] md:text-[14px] font-semibold">
                                             Feb 7,2025
                                         </span>
 
-                                        <p className="text-sm md:text-xl font-normal text-[#393939]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                                        <p className="text-[12px] md:text-[16px] font-normal text-[#393939]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
                                             luptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
                                     </div>
 
 
                                     {/* like and share btn */}
                                     <div className="flex gap-2 md:gap-4 items-center mt-[15px] md:mt-[30px]">
-                                        <button className="cursor-pointer shareBtns bg-transparent border-none flex items-center gap-2 text-[#5E5E5E] text-[10px] md:text-base font-bold" >
-                                            {likeIcon} Like
+                                        <button className="cursor-pointer shareBtns bg-transparent border-none flex items-center gap-2 text-[#5E5E5E] text-[12px] md:text-[16px] font-bold" >
+                                           <span className="h-3 w-3 md:h-5 md:w-5 "> 
+                                           <img src="like.svg" className="h-3 w-3  md:h-5 md:w-5"/>
+                                           </span> Like
                                         </button>
                                         <button className="cursor-pointer shareBtns bg-transparent border-none flex items-center gap-2 text-[#5E5E5E] text-[10px] md:text-base font-bold" >
-                                            {shareIcon} Share
+                                        <img src="share.svg"  className="h-3 w-3  md:h-5 md:w-5"/>
+                                            Share
                                         </button>
                                     </div>
 
-                                    <div className="my-2.5 md:my-4 flex items-end">
+                                    <div className="my-2.5 md:my-4  flex items-center">
                                         <div className="flex items-center justify-center  space-x-[-7px] md:space-x-[-10px]">
                                             {likedMember.map((member) => (
-                                                <div key={member.id} className="relative w-4 h-4 md:w-8 md:h-8">
+                                                <div key={member.id} className="relative w-5 h-5 md:w-8 md:h-8">
                                                     <img
                                                         src={member.image}
                                                         alt={member.alt}
-                                                        className="w-full h-full object-cover rounded-full border-3 border-white shadow-lg"
+                                                        className="w-full h-full object-cover rounded-full border-1 md:border-3 border-white shadow-lg"
                                                     />
                                                 </div>
                                             ))}
                                         </div>
 
-                                        <p className="text-[10px] text-base font-medium ml-1.5">3.5K Likes</p>
+                                        <p className="text-[12px]   md:text-[16px] font-medium ml-1.5">3.5K Likes</p>
                                     </div>
                                 </div>
 
@@ -79,15 +82,16 @@ export default function ReviewCards() {
                                     <img src="/Ellipse 226.png" alt="..." className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full" />
 
                                     <div>
-                                        <div className="border border-[#393939] rounded-[10px] px-3 py-2 md:rounded-[20px] md:px-6 md:py-5">
-                                            <h4 className="text-sm md:text-2xl font-medium">Erick John</h4>
-                                            <p className="text-xs mt-2 md:mt-4 font-normal w-full md:text-lg md:w-[70%]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                        <div className="border border-[#989898] rounded-[10px] px-3 py-2 md:rounded-[20px] md:px-6 md:py-5">
+                                            <h4 className="text-[18px] md:text-xl font-medium">Erick John</h4>
+                                            <p className="text-[12px]   md:text-[16px] mt-1 md:mt-4 font-normal w-full md:text-lg md:w-[70%]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
                                         </div>
 
                                         <div className="mt-[15px] md:mt-[30px]">
-                                            <button className="bg-white cursor-pointer px-6 py-3 md:px-12 md:py-3 text-sm md:text-xl rounded-full border">
-                                                join now to comment
-                                            </button>
+                                        <button className="bg-white cursor-pointer px-6 py-3 md:px-12 md:py-3 text-[14px] md:text-[16px] rounded-full border">
+      <span className="hidden md:inline">join now to </span>
+      comment
+    </button>   
                                         </div>
 
                                     </div>

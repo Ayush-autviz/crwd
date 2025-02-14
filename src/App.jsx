@@ -11,6 +11,7 @@ import StartCRWD from './screens/StartCRWD';
 import StartCRWD2 from './screens/StartCrwd2';
 import Atlanta from './screens/Atlanta';
 import SignUp from './screens/SignUp';
+import Settings from './screens/Settings';
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/start" element={<StartCRWD />} />
           <Route path="/start." element={<StartCRWD2 />} />
-          <Route path="/atlanta" element={<Atlanta />} />
+          <Route path="/crwd" element={<Atlanta />} />
+          <Route path="/setting" element={<Settings />} />
         </Routes>
         <ScrollToTop />
       </Router>

@@ -24,7 +24,7 @@ const Home = () => {
    <div className='bg-[#F3F3F2]'>
    <WhatIsCRWD/>
    </div>
-   <Footer/>
+   <Footer space={true}/>
     </div>
   )
 }

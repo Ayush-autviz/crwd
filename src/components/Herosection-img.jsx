@@ -1,3 +1,4 @@
+import { Share } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const exportIcon = <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,17 +21,22 @@ export default function HeroImage({ img, title, content }) {
                     </div>
 
                     {/* button section */}
-                    <div className="mt-[30px] md:mt-[60px] w-fit mx-auto flex gap-4 justify-center items-center">
-                        <button onClick={()=>{navigation('/start')}} className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black  text-nowrap font-bold text-[16px]">
-                            Start a <img src="/logo.png" alt="..." className="h-[13px] ms-[-3px] object-contain" />
-                        </button>
-                        <button className="cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black  text-nowrap font-bold text-[16px]">
-                            Donate Now
-                        </button>
-                        <button className="shareBtns flex items-center px-4 py-1 md:px-8 md:py-2.5 text-sm md:text-xl font-bold bg-white border rounded-full  transition-shadow ">
-                            {exportIcon}
-                        </button>
-                    </div>
+                    <div className='flex   justify-center items-center my-10  flex-wrap flex-row gap-5'>
+
+<button onClick={()=>{navigation('/start')}}  className="cursor-pointer h-11 w-full md:w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row justify-center  bg-white text-gray-900 transition-shadow duration-200 border border-black">
+   <div className="text-nowrap  font-black text-[16px] ">Start a</div>
+   <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
+ </button>
+
+<button className="font-black text-[16px] justify-center  items-center flex-1 md:flex-none md:w-fit   cursor-pointer h-11 w-fit  px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+  Donate Now
+</button>
+
+<button className="font-black text-[16px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+   <Share />
+</button>
+
+</div>
                 </div>
             </div>
         </>

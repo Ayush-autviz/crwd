@@ -1,6 +1,12 @@
 import { Plus, UserRound } from 'lucide-react'
 import React from 'react'
 
+const likedMember = [
+  { id: 1, image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww", alt: "Person 1" },
+  { id: 2, image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww", alt: "Person 2" },
+  { id: 3, image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww", alt: "Person 3" },
+]
+
 const CRWDcard = ({item}) => {
   return (
     <div className='bg-[#F3F2F2] rounded-xl flex flex-col  md:flex-row gap-4  p-5'>
@@ -18,12 +24,17 @@ const CRWDcard = ({item}) => {
                <div className='flex flex-row items-center  '>               
                 <span className='text-[12px] md:text-[18px] text-nowrap font-[700px] '> {item.memberCount}  Members</span> 
                </div>
-               <div class="flex -space-x-3 md:-space-x-4 rtl:space-x-reverse">
-    <img class="w-5 h-5 md:w-7  md:h-7 border border-white rounded-full " src="home1.svg" />
-    <img class="w-5 h-5 md:w-7  md:h-7 border border-white rounded-full " src="home1.svg" />
-    <img class="w-5 h-5 md:w-7  md:h-7 border border-white rounded-full " src="home1.svg" />
-    <img class="w-5 h-5 md:w-7  md:h-7 border border-white rounded-full " src="home1.svg" />
-</div>
+               <div className="flex items-center justify-center  space-x-[-7px] md:space-x-[-10px]">
+                    {likedMember.map((member) => (
+                                                <div key={member.id} className="relative w-5 h-5 md:w-8 md:h-8">
+                                                    <img
+                                                        src={member.image}
+                                                        alt={member.alt}
+                                                        className="w-full h-full object-cover rounded-full border-1 md:border-3 border-white shadow-lg"
+                                                    />
+                                                </div>
+                     ))}
+               </div>
               </div>
           </div>
         </div>

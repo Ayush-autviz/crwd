@@ -34,7 +34,7 @@ const cardData = [
 export default function Atlanta() {
     return (
         <>
-            <div>
+            <div className="mt-[70px]">
                 <Header />
 
                 <HeroImage img='background.png'
@@ -46,7 +46,7 @@ export default function Atlanta() {
                 <LogoNtitleCard data={cardData} />
 
                 <div className="bg-[#F3F3F2]/55 py-6 md:py-[42px] mx-4 md:mx-0 rounded-xl md:rounded-none">
-                    <h3 className="text-[#373737] text-[14px] md:text-2xl font-medium text-center"> Location: Metro Atlanta, Georgia,</h3>
+                    <h3 className="text-[#373737] text-[14px] md:text-xl font-medium text-center"> Location: Metro Atlanta, Georgia,</h3>
                 </div>
 
                 <ReviewCards />
