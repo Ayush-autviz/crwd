@@ -15,6 +15,7 @@ import Settings from './screens/Settings';
 import About from './screens/AboutUS';
 
 import SearchScreen from './screens/Search';
+import ContactUs from './screens/ContactUs';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/setting" element={<Settings />} />
           <Route path="/about" element={<About />} />
           <Route path="/search" element={<SearchScreen />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
         <ScrollToTop />
       </Router>
