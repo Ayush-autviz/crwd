@@ -3,17 +3,17 @@ import React from 'react'
 const Login = () => {
   return (
     <div className='h-screen  relative flex justify-center items-center bg-[url(authbg.svg)] bg-cover bg-no-repeat'>
-        <div className='bg-white shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:p-10 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
-            <img src='crwd.png' className='h-8 sm:h-9 md:h-10'/>
-            <div className='text-[18px]  mb-1 sm:text-2xl md:text-3xl font-semibold mt-7 text-[#373737]'>Welcome</div>
-            <div className='text-[#393939] text-[12px] md:text-[16px]'>Log in to CRWD to continue</div>
+        <div className='bg-white shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:px-10 md:py-6 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
+            <img src='crwd.png' className='h-6 sm:h-7 md:h-8'/>
+            <div className='text-[18px]  mb-1 sm:text-xl md:text-2xl font-semibold mt-5 text-[#373737]'>Welcome</div>
+            <div className='text-[#393939] text-[10px] md:text-[14px]'>Log in to CRWD to continue</div>
 
-            <button className="bg-white border border-[#989898] py-2 md:py-4 w-full rounded-full mt-6 flex gap-2 justify-center items-center text-[#393939] text-[12px]  md:text-[16px] ">
+            <button className="bg-white border border-[#989898] py-2 md:py-3 w-full rounded-full mt-4 flex gap-2 justify-center items-center text-[#393939] text-[10px]  md:text-[14px] ">
                 <svg
                   className=""
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 48 48"
-                  width="24px"
+                  width="22px"
                 >
                   <path
                     fill="#FFC107"
@@ -34,24 +34,24 @@ const Login = () => {
                 </svg>
                 Continue With Google
             </button>
-            <div className="mt-6 flex w-full  justify-center gap-2 items-center text-[#000]">
+            <div className="mt-4 flex w-full  justify-center gap-2 items-center text-[#000]">
               <hr className="border-[#989898] w-full" />
-              <p className="text-[#393939] text-center text-[12px]  md:text-[16px] ">OR</p>
+              <p className="text-[#393939] text-center text-[10px]  md:text-[14px] ">OR</p>
               <hr className="border-[#989898] w-full" />
             </div>
             <input
-                className="w-full px-4 mt-5 py-3 md:py-4 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none "
+                className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[14px] rounded-full border border-[#989898]  focus:outline-none "
                 type="text"
                 name="cardNumber"
                 placeholder="Email Address"
             />
             <button
-                className="bg-[#393939] mt-5 text-[12px] md:text-[16px]  rounded-full cursor-pointer text-white py-3 md:py-4 w-full  hover:shadow-xl"
+                className="bg-[#393939] mt-4 text-[10px] md:text-[14px]  rounded-full cursor-pointer text-white py-3 md:py-3 w-full  hover:shadow-xl"
               >
                 Continue
             </button>
-            <div className='text-[#393939] text-[12px] md:text-[16px] mt-4'>Don't have an account? <span onClick={()=>{navigation('/signup')}} className='underline cursor-pointer'>Sign up</span> </div>
-            <div className='text-[#393939] text-[12px] md:text-[16px] mt-6'>
+            <div className='text-[#393939] text-[10px] md:text-[14px] mt-4'>Don't have an account? <span onClick={()=>{navigation('/signup')}} className='underline cursor-pointer'>Sign up</span> </div>
+            <div className='text-[#393939] text-[10px] md:text-[14px] mt-4 text-center'>
             This site is protected by reCAPTCHA and the Google <a>Privacy Policy</a> and <a>Terms of Service </a> apply.
             </div>
         </div>

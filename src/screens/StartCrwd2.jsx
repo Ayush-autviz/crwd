@@ -31,21 +31,21 @@ const StartCRWD2 = () => {
   return (
     <div className='h-screen  relative flex justify-center items-center bg-[url(authbg.svg)] bg-cover bg-no-repeat'>
 
-      <div className='bg-white shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:p-10 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
-        <img src='crwd.png' className='h-8 sm:h-9 md:h-10' />
-        <div className="mt-6 flex w-full  justify-center gap-2 items-center text-[#000]">
+      <div className='bg-white shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:px-10 md:py-6  flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
+        <img src='crwd.png' className='h-6 sm:h-7 md:h-8' />
+        <div className="mt-5 flex w-full  justify-center gap-2 items-center text-[#000]">
           <hr className="border-[#989898] w-full" />
         </div>
-        <div className='flex flex-col w-full mt-6'>
-          <div className=" text-[#393939] text-[14px] md:text-[18px] font-semibold">Choose Nonprofit(s)</div>
+        <div className='flex flex-col w-full mt-5'>
+          <div className=" text-[#393939] text-[10px] md:text-[14px] font-semibold">Choose Nonprofit(s)</div>
           <div className="relative w-full">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full px-4 mt-2 py-3 md:py-4 text-[12px]   md:text-[16px]  border border-[#989898] rounded-full flex items-center justify-between bg-white"
+              className="w-full px-4 mt-2 py-3 md:py-3 text-[10px]   md:text-[14px]  border border-[#989898] rounded-full flex items-center justify-between bg-white"
             >
               <div className="flex items-center gap-2">
                 {selectedNonprofits.length === 0 ? (
-                  <span className="text-gray-500  text-[12px]   md:text-[16px] ">Select nonprofits...</span>
+                  <span className="text-gray-500  text-[10px]   md:text-[14px] ">Select nonprofits...</span>
                 ) : (
                   <div className="flex items-center gap-2 rounded-full border py-2 px-3 border-[#E8E8E8]">
                     <img src={selectedNonprofits[0].icon || "/placeholder.svg"} alt="" className="w-6 h-6" />
@@ -80,14 +80,14 @@ const StartCRWD2 = () => {
             )}
           </div>
 
-          <div className="text-[#393939] text-[14px] md:text-[18px] font-semibold mt-5">Why are you raising money?</div>
+          <div className="text-[#393939] text-[10px] md:text-[14px] font-semibold mt-5">Why are you raising money?</div>
 
           <div className="border border-[#989898] mt-2 overflow-hidden rounded-3xl p-3">
-            <div className="border-1 border-[#989898] border-dashed rounded-3xl p-8 flex flex-col items-center justify-center text-gray-500">
-              <img src='upload.svg' className="w-8 h-8 mb-2" />
-              <span className='text-[#808080] text-[13px] sm:text-[16px] md:text-xl'>Add Content</span>
+            <div className="border-1 border-[#989898] border-dashed rounded-3xl p-6 flex flex-col items-center justify-center text-gray-500">
+              <img src='upload.svg' className="w-6 h-6 mb-1" />
+              <span className='text-[#808080] text-[10px] md:text-[14px] '>Add Content</span>
             </div>
-            <div className="flex gap-2 mt-4 bg-white">
+            <div className="flex gap-2 mt-2 bg-white">
               <button className="p-2 hover:bg-gray-100 rounded text-[#393939]">
                 <Bold className="w-4 h-4" strokeWidth={3} />
               </button>
@@ -104,12 +104,12 @@ const StartCRWD2 = () => {
             <div className="my-1 flex w-full  justify-center gap-2 items-center text-[#000]">
               <hr className="border-[#999] w-full" />
             </div>
-            <div className='text-[#393939] text-[12px] md:text-[16px] mt-2'>
+            <div className='text-[#393939] text-[10px] md:text-[14px] mt-2'>
               Create a philanthropy movement powered by your community. It’s  simple: choose a cause, invite friends, and make an impact
             </div>
           </div>
           <button
-            className="bg-[#393939] mt-5 text-[12px] md:text-[16px]  rounded-full cursor-pointer text-white py-3 md:py-4 w-full  hover:shadow-xl  "
+            className="bg-[#393939] mt-5 text-[10px] md:text-[14px]  rounded-full cursor-pointer text-white py-3 md:py-3 w-full  hover:shadow-xl  "
           >
             Submit
           </button>
