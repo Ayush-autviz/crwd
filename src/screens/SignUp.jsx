@@ -11,31 +11,31 @@ const Login = () => {
     }
     return (
         <div className='h-screen  relative flex justify-center items-center bg-[url(authbg.svg)] bg-cover bg-no-repeat'>
-            <div className='bg-white  shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:p-10 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
-                <img src='crwd.png' className='h-8 sm:h-9 md:h-10' />
-                <div className='text-[18px]  mb-1 sm:text-2xl md:text-3xl font-semibold mt-7 text-[#373737]'>Create an account</div>
-                <div className='text-[#393939] text-[12px] md:text-[16px]'>Already have an account? <span onClick={()=>{navigation('/login')}} className='underline cursor-pointer'>Sign in</span> </div>
+            <div className='bg-white  shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:px-10 md:py-6 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
+                <img src='crwd.png' className='h-6 sm:h-7 md:h-8' />
+                <div className='text-[16px]  mb-1 sm:text-xl md:text-2xl font-semibold mt-5 text-[#373737]'>Create an account</div>
+                <div className='text-[#393939] text-[10px] md:text-[14px]'>Already have an account? <span onClick={()=>{navigation('/login')}} className='underline cursor-pointer'>Sign in</span> </div>
                 <input
-                    className="w-full px-4 mt-5 py-3 md:py-4 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none"
+                    className="w-full px-4 mt-4 py-3 md:py-3 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none"
                     type="text"
                     name="cardNumber"
                     placeholder="First Name"
                 />
                 <input
-                    className="w-full px-4 mt-5 py-3 md:py-4 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none "
+                    className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[14px] rounded-full border border-[#989898]  focus:outline-none "
                     type="text"
                     name="cardNumber"
                     placeholder="Last Name"
                 />
                 <input
-                    className="w-full px-4 mt-5 py-3 md:py-4 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none"
+                    className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[14px] rounded-full border border-[#989898]  focus:outline-none"
                     type="text"
                     name="cardNumber"
                     placeholder="Email Address"
                 />
-                <div className="relative w-full mt-5 ">
+                <div className="relative w-full mt-4 ">
                     <input
-                        className="w-full px-4 py-3 md:py-4 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none"
+                        className="w-full px-4 py-3 md:py-3 text-[10px]   md:text-[14px] rounded-full border border-[#989898]  focus:outline-none"
                         type={showPassword ? "text" : "password"}
                         name="Password"
                         placeholder="Password"
@@ -49,11 +49,11 @@ const Login = () => {
                     </button>
                 </div>
                 <button
-                    className="bg-[#393939] mt-5 text-[12px] md:text-[16px]  rounded-full cursor-pointer text-white py-3 md:py-4 w-full  hover:shadow-xl "
+                    className="bg-[#393939] mt-4 text-[10px] md:text-[14px]  rounded-full cursor-pointer text-white py-3 md:py-3 w-full  hover:shadow-xl "
                 >
                     Sign up
                 </button>
-                <div className='text-[#393939] text-[12px] md:text-[16px] mt-6'>
+                <div className='text-[#393939] text-center text-[10px] md:text-[14px] mt-4'>
                     This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
                 </div>
             </div>
