@@ -12,6 +12,9 @@ import StartCRWD2 from './screens/StartCrwd2';
 import Atlanta from './screens/Atlanta';
 import SignUp from './screens/SignUp';
 import Settings from './screens/Settings';
+import About from './screens/AboutUS';
+
+import SearchScreen from './screens/Search';
 
 const App = () => {
   return (
@@ -27,6 +30,8 @@ const App = () => {
           <Route path="/start." element={<StartCRWD2 />} />
           <Route path="/crwd" element={<Atlanta />} />
           <Route path="/setting" element={<Settings />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/search" element={<SearchScreen />} />
         </Routes>
         <ScrollToTop />
       </Router>
