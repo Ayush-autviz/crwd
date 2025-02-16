@@ -10,7 +10,7 @@ export default function LogoNtitleCard({ data }) {
 
     return (
         <>
-            <div className="my-[30px] md:mt-[100px] px-4 pt-10 md:px-10 lg:px-20" >
+            <div className=" md:mb-[100px] md:mt-[50px]  px-4 pt-10 md:px-10 lg:px-20" >
                 <h1 className="text-2xl text-center md:text-5xl font-bold text-[#393939] mb-2">Nonprofits we support</h1>
                 {/* Nonprofits we support */}
                 <div className='grid grid-col-1 md:grid-cols-2 gap-4 md:gap-[30px] mt-10 mb-6'>

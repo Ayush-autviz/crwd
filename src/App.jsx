@@ -16,6 +16,7 @@ import About from './screens/AboutUS';
 
 import SearchScreen from './screens/Search';
 import ContactUs from './screens/ContactUs';
+import DonorProfile from './screens/DonorProfile';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/search" element={<SearchScreen />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/donor" element={<DonorProfile />} />
         </Routes>
         <ScrollToTop />
       </Router>
