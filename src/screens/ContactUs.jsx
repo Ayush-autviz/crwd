@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom';
 import { Eye, EyeOff } from 'lucide-react';
 
@@ -59,8 +60,8 @@ const ContactUs = () => {
             </div>
             <div className='bg-white ml-auto  shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] h-fit rounded-2xl px-4 py-6 md:px-10 md:py-6 flex flex-col justify-center items-center w-[100%]'>
               
-                <div className='text-[16px]  mb-1 sm:text-xl md:text-2xl font-semibold  text-[#373737]'>Get In Touch</div>
-                <div className='text-[#393939] text-[10px] md:text-[14px] mb-4 text-center'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </div>
+                <div className='text-[16px]  mb-1 sm:text-xl md:text-3xl font-semibold  text-[#373737]'>Get In Touch</div>
+                <div className='text-[#393939] text-[10px] md:text-[20px] mb-4 text-center'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </div>
                 <input
                     className="w-full px-4 mt-4 py-3 md:py-3 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none"
                     type="text"
@@ -69,32 +70,32 @@ const ContactUs = () => {
                 />
 
                 <input
-                    className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[14px] rounded-full border border-[#989898]  focus:outline-none"
+                    className="w-full px-4 mt-4 py-3 md:py-3 text-[12px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none"
                     type="text"
                     name="cardNumber"
                     placeholder="Email Address"
                 />
                 <input
-                    className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[14px] rounded-full border border-[#989898]  focus:outline-none "
+                    className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none "
                     type="text"
                     name="cardNumber"
                     placeholder="Subject"
                 />
                                 <input
-                    className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[14px] rounded-full border border-[#989898]  focus:outline-none "
+                    className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none "
                     type="text"
                     name="cardNumber"
                     placeholder="Message"
                 />
 
                 <button
-                    className="bg-[#393939] mt-4 text-[10px] md:text-[14px]  rounded-full cursor-pointer text-white py-3 md:py-3 w-full  hover:shadow-xl "
+                    className="bg-[#393939] mt-5 text-[10px] md:text-[20px] px-5 rounded-full cursor-pointer text-white py-3 md:py-4 w-full  hover:shadow-xl "
                 >
                     Submit
                 </button>   
             </div>
         </div>
-      
+      <Footer />
     </div>
   )
 }

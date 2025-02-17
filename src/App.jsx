@@ -17,6 +17,8 @@ import About from './screens/AboutUS';
 import SearchScreen from './screens/Search';
 import ContactUs from './screens/ContactUs';
 import DonorProfile from './screens/DonorProfile';
+import PrivacyPolicy from './screens/PrivactPolicy';
+import TermsConditions from './screens/TermsConditions';
 
 const App = () => {
   return (
@@ -36,6 +38,8 @@ const App = () => {
           <Route path="/search" element={<SearchScreen />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/donor" element={<DonorProfile />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsConditions />} />
         </Routes>
         <ScrollToTop />
       </Router>

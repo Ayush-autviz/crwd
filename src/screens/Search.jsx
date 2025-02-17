@@ -62,7 +62,7 @@ const SearchScreen = () => {
             <Search color="#fff" className="h-5 w-5 md:h-6 md:w-6"  />
             </div>
             <input
-  className="w-full text-lg md:text-2xl"
+  className="w-full text-lg md:text-2xl outline-none"
   placeholder={placeholder}
   // The zero-width space ensures the first part is always visible
 />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Header2 from '../components/Header2';
@@ -8,6 +8,51 @@ const MakeSecureDonation = () => {
   const [paymentMethod, setPaymentMethod] = useState('apple-pay');
   const [amount,setAmount] = useState(5);
   const [type,setType] = useState('once');
+
+  const [formData, setFormData] = useState({
+    email: '',
+    firstName: '',
+    lastName: '',
+    nameOnCard: '',
+    month: '',
+    year: '',
+    cvv: '',
+    country: '',
+    postalCode: ''
+  });
+  
+  const [useBillingName, setUseBillingName] = useState(false);
+  
+  // Effect to update name on card whenever first name or last name changes
+  useEffect(() => {
+    if (useBillingName) {
+      setFormData(prev => ({
+        ...prev,
+        nameOnCard: `${prev.firstName} ${prev.lastName}`.trim()
+      }));
+    }
+  }, [formData.firstName, formData.lastName, useBillingName]);
+  
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  
+  const handleCheckboxChange = (e) => {
+    const checked = e.target.checked;
+    setUseBillingName(checked);
+    
+    if (checked) {
+      // Immediately update name on card when checkbox is checked
+      setFormData(prev => ({
+        ...prev,
+        nameOnCard: `${prev.firstName} ${prev.lastName}`.trim()
+      }));
+    }
+  };
   return (
     <div className='mt-[70px]'>
       <Header2/>
@@ -97,7 +142,7 @@ const MakeSecureDonation = () => {
     ))}
   </div>
 
-         <div className="mt-6">
+         {/* <div className="mt-6">
         <input 
           type="text"
           value={amount}
@@ -105,7 +150,20 @@ const MakeSecureDonation = () => {
           placeholder="$ Choose a donation amount"
           className="w-full text-[14px] font-semibold md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
         />
-        </div>
+        </div> */}
+
+        <div className="mt-6 relative">
+      <span className="absolute left-4 top-1/2 -translate-y-1/2  font-semibold text-[14px] md:text-xl">
+        $
+      </span>
+      <input
+        type="text"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+        placeholder="Choose a donation amount"
+        className="w-full text-[14px] font-semibold md:text-xl pl-8 pr-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+      />
+    </div>
 
         <h3 className=" text-[17px] md:text-xl font-semibold text-gray-900 my-5">Payment Method</h3>
 
@@ -143,94 +201,110 @@ const MakeSecureDonation = () => {
             </label>
         {
             paymentMethod === 'credit-debit' &&   <div className="flex flex-col gap-4 mt-4">
-
-<div className="relative ">
-            <input
+            <div className="relative">
+              <input
                 className="w-full text-[14px] md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                 type="text"
-                name="Email"
+                name="email"
                 placeholder="Email address"
-                // value={cardNumber}
-                // onChange={handleInputChange}
+                value={formData.email}
+                onChange={handleInputChange}
               />
-             </div>
+            </div>
             
-            <div className="relative ">
-            <input
+            <div className="relative">
+              <input
                 className="w-full text-[14px] md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                 type="text"
-                name="First Name"
+                name="firstName"
                 placeholder="First Name"
-                // value={cardNumber}
-                // onChange={handleInputChange}
+                value={formData.firstName}
+                onChange={handleInputChange}
               />
-             </div>
-
-             <div className="relative ">
-            <input
+            </div>
+            
+            <div className="relative">
+              <input
                 className="w-full text-[14px] md:text-xl px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
                 type="text"
-                name="Last Name"
+                name="lastName"
                 placeholder="Last Name"
-                // value={cardNumber}
-                // onChange={handleInputChange}
+                value={formData.lastName}
+                onChange={handleInputChange}
               />
-             </div>
-             <div className="flex items-center gap-2 pl-3 ">
-                            <input
-                                type="checkbox"
-                                className="w-[18px] h-[18px] rounded-[5px] border-2 border-[#393939]  accent-[#393939]"
-                            />
-                            <div className="text-[15px] md:text-lg">Use as billing name</div>
-                        </div>
-             <div className="relative flex  flex-row gap-3 ">
-
-               <input
-                 className="w-full px-4 py-3 text-[14px] md:text-xl  rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
-                 type="number"
-                 name="email"
-                 placeholder="MM"
-               />
-               <input
-                 className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
-                 type="number"
-                 name="email"
-                 placeholder="YY"
-               />
-                <input
-                 className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
-                 type="text"
-                 name="text"
-                 placeholder="CVV"
-               />
-             </div>
-
-             <div className="relative">
-               <input
-                 className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
-                 type="text"
-                 name="Name on card"
-                 placeholder="Name on card"
-               />
-             </div>
-             <div className="relative">
-               <input
-                 className="w-full px-4 text-[14px] md:text-xl py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
-                 type="text"
-                 name="Country"
-                 placeholder="Country"
-               />
-             </div>
-             <div className="relative">
-               <input
-                 className="w-full px-4 text-[14px] md:text-xl py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
-                 type="text"
-                 name="Postal Code"
-                 placeholder="Postal Code"
-               />
-             </div>
-        
-                </div>
+            </div>
+            
+            <div className="flex items-center gap-2 pl-3">
+              <input
+                type="checkbox"
+                checked={useBillingName}
+                onChange={handleCheckboxChange}
+                className="w-[18px] h-[18px] rounded-[5px] border-2 border-[#393939] accent-[#393939]"
+              />
+              <div className="text-[15px] md:text-lg">Use as billing name</div>
+            </div>
+            
+            <div className="relative flex flex-row gap-3">
+              <input
+                className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                type="number"
+                name="month"
+                placeholder="MM"
+                value={formData.month}
+                onChange={handleInputChange}
+              />
+              <input
+                className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                type="number"
+                name="year"
+                placeholder="YY"
+                value={formData.year}
+                onChange={handleInputChange}
+              />
+              <input
+                className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                type="text"
+                name="cvv"
+                placeholder="CVV"
+                value={formData.cvv}
+                onChange={handleInputChange}
+              />
+            </div>
+            
+            <div className="relative">
+              <input
+                className="w-full px-4 py-3 text-[14px] md:text-xl rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                type="text"
+                name="nameOnCard"
+                placeholder="Name on card"
+                value={formData.nameOnCard}
+                onChange={handleInputChange}
+                readOnly={useBillingName}
+              />
+            </div>
+            
+            <div className="relative">
+              <input
+                className="w-full px-4 text-[14px] md:text-xl py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                type="text"
+                name="country"
+                placeholder="Country"
+                value={formData.country}
+                onChange={handleInputChange}
+              />
+            </div>
+            
+            <div className="relative">
+              <input
+                className="w-full px-4 text-[14px] md:text-xl py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gray-400"
+                type="text"
+                name="postalCode"
+                placeholder="Postal Code"
+                value={formData.postalCode}
+                onChange={handleInputChange}
+              />
+            </div>
+          </div>
         }
 
 

@@ -14,11 +14,11 @@ const About = () => {
         </div>
 
         {/* Mission Statement */}
-        <div className="bg-[#F3F3F2] p-4 rounded-lg mb-8">
-          <h3 className="text-lg font-semibold  mb-2 flex items-center justify-center md:justify-start text-center md:text-left">
-            <Shield className="w-5 h-5 mr-2 " /> Our Mission
+        <div className=" p-4 rounded-lg mb-8">
+          <h3 className="text-lg font-semibold  mb-2 flex items-center justify-center  text-center md:text-left">
+            Our Mission
           </h3>
-          <p className="text-gray-700 leading-relaxed text-center md:text-left">
+          <p className="text-gray-700 leading-relaxed text-center ">
             The American Red Cross prevents and alleviates human suffering in the face of emergencies by mobilizing the power of volunteers and the generosity of donors.
           </p>
         </div>
@@ -26,32 +26,41 @@ const About = () => {
         {/* Info Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
-            <h3 className="text-lg font-semibold mb-2">Causes</h3>
+            <h3 className="text-lg font-semibold mb-2">Website</h3>
             <p className="text-gray-600 text-center">
-              Disaster and Emergency Management, Blood Banks, Safety Education
+              www.xyz.com
             </p>
           </div>
 
           <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
             <div className="flex items-center mb-2">
-              <Calendar className="w-5 h-5 mr-2" />
+             
               <h3 className="text-lg font-semibold">Established</h3>
             </div>
             <p className="text-gray-600">1938</p>
           </div>
 
-          <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
+          {/* <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
             <div className="flex items-center mb-2">
-              <CheckCircle className="w-5 h-5 mr-2" />
+           
               <h3 className="text-lg font-semibold">Verified on CRWD</h3>
             </div>
             <p className="text-gray-600">2005</p>
-          </div>
+          </div> */}
 
           <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
             <div className="flex items-center mb-2">
-              <Building className="w-5 h-5 mr-2" />
+             
               <h3 className="text-lg font-semibold">Location</h3>
+            </div>
+            <p className="text-gray-600 text-center">
+              PO Box 37839 Boone IA 50037 US
+            </p>
+          </div>
+          <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
+            <div className="flex items-center mb-2">
+             
+              <h3 className="text-lg font-semibold">EIN/Tax ID number</h3>
             </div>
             <p className="text-gray-600 text-center">
               PO Box 37839 Boone IA 50037 US

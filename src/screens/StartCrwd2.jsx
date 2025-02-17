@@ -1,5 +1,6 @@
-import { Bold, ChevronDown, Italic, Link, Underline, Upload, X } from 'lucide-react'
+import { Bold, ChevronDown, Info, Italic, Link, Underline, Upload, X } from 'lucide-react'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const nonprofits = [
   {
@@ -13,6 +14,16 @@ const StartCRWD2 = () => {
   const [selectedNonprofits, setSelectedNonprofits] = useState([])
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const [editorContent, setEditorContent] = useState("")
+  const [other, setOther] = useState(false);
+  const navigation = useNavigate();
+
+
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  const handleTouch = (e) => {
+    e.preventDefault();
+    setShowTooltip(!showTooltip);
+  };
 
 
   const toggleNonprofit = (nonprofit) => {
@@ -36,8 +47,11 @@ const StartCRWD2 = () => {
         <div className="mt-5 flex w-full  justify-center gap-2 items-center text-[#000]">
           <hr className="border-[#989898] w-full" />
         </div>
-        <div className='flex flex-col w-full mt-5'>
+        <div className='text-[12px] w-full text-left   sm:text-sm md:text-xl font-semibold mt-4 text-[#373737] '>Who are you donating to?</div>
+        <div className='flex flex-col w-full mt-4'>
           <div className=" text-[#393939] text-[10px] md:text-[14px] font-semibold">Choose Nonprofit(s)</div>
+          
+          <div className='text-[8px] md:text-[12px] mt-1 text-[#393939]'>A CRWD can support one or more nonprofits</div>
           <div className="relative w-full">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -61,7 +75,7 @@ const StartCRWD2 = () => {
                   </div>
                 )}
               </div>
-              <ChevronDown className="w-5 h-5 text-gray-500" />
+              {/* <ChevronDown className="w-5 h-5 text-gray-500" /> */}
             </button>
 
             {isDropdownOpen && (
@@ -80,38 +94,48 @@ const StartCRWD2 = () => {
             )}
           </div>
 
-          <div className="text-[#393939] text-[10px] md:text-[14px] font-semibold mt-5">Why are you raising money?</div>
-
-          <div className="border border-[#989898] mt-2 overflow-hidden rounded-3xl p-3">
-            <div className="border-1 border-[#989898] border-dashed rounded-3xl p-6 flex flex-col items-center justify-center text-gray-500">
-              <img src='upload.svg' className="w-6 h-6 mb-1" />
-              <span className='text-[#808080] text-[10px] md:text-[14px] '>Add Content</span>
+          <div className='text-[#393939] mt-4 text-[10px] md:text-[14px] font-semibold'>What is your suggested monthly donation for your CRWD?</div>
+          <div className='text-[8px] md:text-[12px] mt-1 text-[#393939]'>Minimum donation is $5 for all CRWD’s, but you can suggest an amount here.</div>
+          <div className='flex flex-row  items-center gap-2 mt-4'>
+            <div onClick={() => setOther(false)} className={`rounded-xl px-5 py-3 md:py-3 text-[10px]  cursor-pointer  md:text-[14px]  flex items-center justify-center bg-[#EEE] ${!other ? 'border border-[#989898]' : ''}`}>
+              $5
             </div>
-            <div className="flex gap-2 mt-2 bg-white">
-              <button className="p-2 hover:bg-gray-100 rounded text-[#393939]">
-                <Bold className="w-4 h-4" strokeWidth={3} />
-              </button>
-              <button className="p-2 hover:bg-gray-100 rounded text-[#393939]">
-                <Italic strokeWidth={3} className="w-4 h-4" />
-              </button>
-              <button className="p-2 hover:bg-gray-100 rounded text-[#393939]">
-                <Underline strokeWidth={3} className="w-4 h-4" />
-              </button>
-              <button className="p-2 hover:bg-gray-100 rounded text-[#393939]">
-                <Link strokeWidth={3} className="w-4 h-4" />
-              </button>
-            </div>
-            <div className="my-1 flex w-full  justify-center gap-2 items-center text-[#000]">
-              <hr className="border-[#999] w-full" />
-            </div>
-            <div className='text-[#393939] text-[10px] md:text-[14px] mt-2'>
-              Create a philanthropy movement powered by your community. It’s  simple: choose a cause, invite friends, and make an impact
-            </div>
+   <div className="relative inline-block">
+      <div 
+        onClick={() => setOther(true)}
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+        onTouchStart={handleTouch}
+        className="group rounded-xl px-5 py-3 md:py-3 text-[10px] md:text-[14px] flex items-center gap-2 justify-center bg-[#EEE] cursor-pointer hover:bg-[#E5E5E5] transition-colors"
+        style={other ? { border: '1px solid #989898' } : {}}
+      >
+        <span>Suggested</span>
+        {/* <Info className="h-3 w-3 md:h-4 md:w-4 text-gray-500" /> */}
+      </div>
+      
+      {showTooltip && (
+        <div className="absolute z-50 w-48 p-2 text-sm text-white bg-[#393939] rounded-lg -translate-x-1/2 left-1/2 mt-2">
+          <div className="absolute w-2 h-2 bg-[#393939] rotate-45 -translate-x-1/2 -top-1 left-1/2" />
+          <p className="text-center bg-[#393939] text-xs">
+            People can join any CRWD for $5. Suggested amount is optional but what we recommend users to donate monthly
+          </p>
+        </div>
+      )}
+    </div>
+            {
+              other && (<input
+                className="w-full px-4  py-3 md:py-3 text-[10px]   md:text-[14px] rounded-full border border-[#989898]  focus:outline-none "
+                type="number"
+                name="cardNumber"
+                placeholder="$"
+              />)
+            }
           </div>
           <button
+          onClick={()=>{navigation("/crwd")}}
             className="bg-[#393939] mt-5 text-[10px] md:text-[14px]  rounded-full cursor-pointer text-white py-3 md:py-3 w-full  hover:shadow-xl  "
           >
-            Submit
+              Continue
           </button>
         </div>
       </div>
