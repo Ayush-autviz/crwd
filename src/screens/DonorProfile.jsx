@@ -62,7 +62,7 @@ const DonorProfile = () => {
             </div>
             <div className="text-2xl text-center  md:text-4xl text-[#373737] font-bold  mt-20">Natalie Root</div>
 
-            <div className={`bg-[url('bgprofile.svg')] rounded-2xl flex flex-col justify-center items-center mt-10 p-8 mx-4 md:mx-10 lg:mx-20`}>
+            <div className={`bg-[url('/bg-covers/bgprofile.svg')] rounded-2xl flex flex-col justify-center items-center mt-10 p-8 mx-4 md:mx-10 lg:mx-20`}>
                 <img src='profile1.svg' className='md:h-30 md:w-30 w-20 h-20 rounded-full'/>
                 <div className="text-xl text-center  md:text-2xl text-white font-bold  mt-5">100+ Women Who Care- Pinellas Countyalie Root</div>
                 <div className="w-[30%] h-[1px] mt-4 mb-2 relative">
