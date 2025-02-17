@@ -126,17 +126,23 @@ const SearchScreen = () => {
             Nonprofits
           </button>
         </div>
-        <div className="flex flex-col w-full   gap-3 mt-10 md:mt-15">
-          <div className="text-2xl   md:text-5xl  font-bold text-[#393939] ">
-            {type === "crwd" ? "CRWDs" : "Nonprofits"}
+
+        {text.length > 5 ? (
+          <></>
+        ) : (
+          <div className="flex flex-col w-full   gap-3 mt-10 md:mt-15">
+            <div className="text-2xl   md:text-5xl  font-bold text-[#393939] ">
+              {type === "crwd" ? "CRWDs" : "Nonprofits"}
+            </div>
+            <div className="text-sm   md:text-lg  font-light text-[#393939] w-[85%] md:w-[60%] ">
+              {" "}
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae.
+            </div>
           </div>
-          <div className="text-sm   md:text-lg  font-light text-[#393939] w-[85%] md:w-[60%] ">
-            {" "}
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae.
-          </div>
-        </div>
+        )}
+
         {text?.length > 5 ? (
           <div className="flex flex-col items-center justify-center text-center p-4">
             <h4 className="text-xl font-semibold mb-2">
