@@ -70,7 +70,7 @@ const Settings = () => {
                     </button>
                 </div>
 
-                <div className='bg-[url(bgimg.svg)] rounded-2xl w-full bg-cover bg-center bg-no-repeat p-5  md:p-7 '>
+                <div className="bg-[url('/bg-covers/bgimg.svg')] rounded-2xl w-full bg-cover bg-center bg-no-repeat p-5  md:p-7 ">
                     <div className='flex flex-col   w-full'>
                         <div className='font-semibold text-xl md:text-left text-center md:text-2xl text-white my-2'>Your Donations</div>
                         <div className='flex flex-row flex-wrap gap-[10%] w-full items-center'>
