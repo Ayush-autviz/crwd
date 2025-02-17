@@ -6,7 +6,7 @@ const nonprofits = [
   {
     id: "1",
     name: "American Cancer Society",
-    icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-12%20at%203.19.33%E2%80%AFPM-Oqbdme1YJ9M6PC112qgZcz1aHjFBIv.png",
+    icon: "crwd1.svg",
   },
 ]
 
@@ -16,6 +16,7 @@ const StartCRWD2 = () => {
   const [editorContent, setEditorContent] = useState("")
   const [other, setOther] = useState(false);
   const navigation = useNavigate();
+  const [search,setSearch] = useState('');
 
 
   const [showTooltip, setShowTooltip] = useState(false);
@@ -33,6 +34,9 @@ const StartCRWD2 = () => {
     } else {
       setSelectedNonprofits([...selectedNonprofits, nonprofit])
     }
+    setSearch("");
+    setIsDropdownOpen(false);
+    
   }
 
   const removeNonprofit = (id) => {
@@ -53,17 +57,43 @@ const StartCRWD2 = () => {
           
           <div className='text-[8px] md:text-[12px] mt-1 text-[#393939]'>A CRWD can support one or more nonprofits</div>
           <div className="relative w-full">
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full px-4 mt-2 py-3 md:py-3 text-[10px]   md:text-[14px]  border border-[#989898] rounded-full flex items-center justify-between bg-white"
-            >
-              <div className="flex items-center gap-2">
-                {selectedNonprofits.length === 0 ? (
-                  <span className="text-gray-500  text-[10px]   md:text-[14px] ">Select nonprofits...</span>
-                ) : (
-                  <div className="flex items-center gap-2 rounded-full border py-2 px-3 border-[#E8E8E8]">
+            <input
+            value={search}
+            onChange={(e)=>{
+              if(e.target.value.length>0){
+                setIsDropdownOpen(true);
+              }else{
+                setIsDropdownOpen(false);
+              }
+              
+              setSearch(e.target.value)
+            }}
+            className='w-full px-4 mt-2 py-3 md:py-3 text-[10px] outline-none   md:text-[14px]  border border-[#989898] rounded-full flex items-center justify-between bg-white'
+            placeholder='Search for a Non-Profit'
+            />
+            {isDropdownOpen && (
+              <div className="absolute w-full -bottom-[120%]  p-2 bg-white border border-[#E8E8E8] rounded-xl shadow-lg z-10">
+                {nonprofits.map((nonprofit) => (
+                  <button
+                    key={nonprofit.id}
+                    onClick={() => toggleNonprofit(nonprofit)}
+                    className="w-full px-4 py-2 flex items-center gap-2 hover:bg-gray-50"
+                  >
+                    <img src={nonprofit.icon || "/placeholder.svg"} alt="" className="w-5 h-5" />
+                    <span className='text-[#393939] text-[10px] md:text-[14px] font-semibold'>{nonprofit.name}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className='flex flex-row gap-2 flex-wrap mt-2'>
+            {
+              selectedNonprofits.map((item)=>{
+                return <>
+                 <div className="flex w-fit items-center gap-2 rounded-full border py-2 px-3 border-[#E8E8E8]">
                     <img src={selectedNonprofits[0].icon || "/placeholder.svg"} alt="" className="w-6 h-6" />
-                    <span>{selectedNonprofits[0].name}</span>
+                    <span className='text-[#393939] text-[10px] md:text-[14px] font-semibold'>{selectedNonprofits[0].name}</span>
                     <button
                       onClick={(e) => {
                         e.stopPropagation()
@@ -73,26 +103,12 @@ const StartCRWD2 = () => {
                       <X className="w-4 h-4" />
                     </button>
                   </div>
-                )}
-              </div>
-              {/* <ChevronDown className="w-5 h-5 text-gray-500" /> */}
-            </button>
+                </>
+              }
 
-            {isDropdownOpen && (
-              <div className="absolute w-full mt-2 p-2 bg-white border border-[#E8E8E8] rounded-lg shadow-lg z-10">
-                {nonprofits.map((nonprofit) => (
-                  <button
-                    key={nonprofit.id}
-                    onClick={() => toggleNonprofit(nonprofit)}
-                    className="w-full px-4 py-2 flex items-center gap-2 hover:bg-gray-50"
-                  >
-                    <img src={nonprofit.icon || "/placeholder.svg"} alt="" className="w-6 h-6" />
-                    <span>{nonprofit.name}</span>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+              )
+            }
+            </div>
 
           <div className='text-[#393939] mt-4 text-[10px] md:text-[14px] font-semibold'>What is your suggested monthly donation for your CRWD?</div>
           <div className='text-[8px] md:text-[12px] mt-1 text-[#393939]'>Minimum donation is $5 for all CRWD’s, but you can suggest an amount here.</div>

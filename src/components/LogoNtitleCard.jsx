@@ -19,7 +19,7 @@ export default function LogoNtitleCard({ data }) {
                             <>
                                 <div className="bg-[#F3F3F2] rounded-xl p-3 md:px-[25px] md:py-[15px] flex items-center gap-4 md:gap-11">
                                     <div className="bg-white px-3 py-2 md:px-7 md:py-5 h-ful flex justify-center items-center w-fit h-fit rounded-xl">
-                                        <img src={i.img} alt="" className="w-[87.3px] h-[87.3px] md:w-[128px] md:h8-[128px] object-contain" />
+                                        <img src={i.img} alt="" className="w-[75.3px] h-[75.3px] md:w-[110px] md:h8-[110px] object-contain" />
                                     </div>
                                     <div className="">
                                         <h2 className="text-[#373737] font-semibold text-sm md:text-xl">{i.title}</h2>

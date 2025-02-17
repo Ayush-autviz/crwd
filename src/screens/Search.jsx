@@ -144,17 +144,17 @@ const SearchScreen = () => {
         )}
 
         {text?.length > 5 ? (
-          <div className="flex flex-col items-center justify-center text-center p-4">
-            <h4 className="text-xl font-semibold mb-2">
+          <div className="flex flex-col items-center justify-center mt-5 md:mt-10 text-center p-4">
+            <h4 className="text-xl md:2xl font-semibold mb-2">
               Hmm, no results for that search.
             </h4>
-            <p className="mb-4 text-2xl font-normal text-[#616161]">
+            <p className="mb-4 text-xl md:text-2xl font-normal text-[#616161]">
               Please try again.
             </p>
             <img
               src={"/placeholder.png"}
               alt="Not Found"
-              className="max-w-full h-auto"
+              className="w-[100px] h-[100px] md:w-[200px] md:h-[200px] object-contain"
             />
           </div>
         ) : (

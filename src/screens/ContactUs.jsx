@@ -27,7 +27,7 @@ const ContactUs = () => {
                 <div className='text-sm text-left md:text-[16px] xl:text-xl font-light mt-4 text-[#393939]'>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.Sed ut perspiciatis
                 </div>
-                <div className='flex flex-row  flex-wrap gap-10 md:gap-13  xl:gap-25 mt-10 md:mt-5  xl:mt-10'>
+                {/* <div className='flex flex-row  flex-wrap gap-10 md:gap-13  xl:gap-25 mt-10 md:mt-5  xl:mt-10'>
                     <div className='flex flex-col md:gap-2 xl:gap-4'>
                     <div className='text-left text-[18px] md:text-xl font-semibold  text-[#373737]'>
                         Phone
@@ -54,7 +54,7 @@ const ContactUs = () => {
                     abc@gmail.com
                     </div>
                 </div>
-                </div>
+                </div> */}
 
 
             </div>
@@ -75,21 +75,15 @@ const ContactUs = () => {
                     name="cardNumber"
                     placeholder="Email Address"
                 />
-                <input
-                    className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none "
-                    type="text"
-                    name="cardNumber"
-                    placeholder="Subject"
-                />
-                                <input
-                    className="w-full px-4 mt-4 py-3 md:py-3 text-[10px]   md:text-[16px] rounded-full border border-[#989898]  focus:outline-none "
-                    type="text"
-                    name="cardNumber"
-                    placeholder="Message"
-                />
+
+       <textarea
+      className="w-full px-4 mt-4 py-3 md:py-3 text-[10px] md:text-[16px] resize-none rounded-4xl border border-[#989898] focus:outline-none h-28"
+      name="message"
+      placeholder="Message"
+    />
 
                 <button
-                    className="bg-[#393939] mt-5 text-[10px] md:text-[20px] px-5 rounded-full cursor-pointer text-white py-3 md:py-4 w-full  hover:shadow-xl "
+                    className="bg-[#393939] mt-5 text-[10px] md:text-[16px] px-5 rounded-full cursor-pointer text-white py-3 md:py-3 w-full  "
                 >
                     Submit
                 </button>   
