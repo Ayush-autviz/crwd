@@ -9,7 +9,7 @@ import About from '../components/AboutUsCard'
 const NonProfit = () => {
   const navigation = useNavigate();
   const richColors = [
-    "#FF96AF", "#8B85FF", "#D4FFA8", "#CE9EFF", "#BDBDBD"
+    "#F7194E", "#0C00FF", "#A7FF4E", "#932CFF", "#393939"
 ];
 
   const [currentColor, setCurrentColor] = useState(richColors[0]);
@@ -30,7 +30,7 @@ const NonProfit = () => {
                               N
                     </div> */}
                     <div 
-      className={`h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white `}
+      className={`h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white opacity-90 `}
       onClick={getRandomColor}
     >
       A

@@ -24,21 +24,21 @@ const About = () => {
         </div>
 
         {/* Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex flex-col items-center p-4  rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Website</h3>
             <p className="text-gray-600 text-center">
               www.xyz.com
             </p>
           </div>
 
-          <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
+          {/* <div className="flex flex-col items-center p-4  rounded-lg">
             <div className="flex items-center mb-2">
              
               <h3 className="text-lg font-semibold">Established</h3>
             </div>
             <p className="text-gray-600">1938</p>
-          </div>
+          </div> */}
 
           {/* <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
             <div className="flex items-center mb-2">
@@ -48,7 +48,7 @@ const About = () => {
             <p className="text-gray-600">2005</p>
           </div> */}
 
-          <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
+          <div className="flex flex-col items-center p-4  rounded-lg">
             <div className="flex items-center mb-2">
              
               <h3 className="text-lg font-semibold">Location</h3>
@@ -57,7 +57,7 @@ const About = () => {
               PO Box 37839 Boone IA 50037 US
             </p>
           </div>
-          <div className="flex flex-col items-center p-4 bg-[#F3F3F2] rounded-lg">
+          <div className="flex flex-col items-center p-4 rounded-lg">
             <div className="flex items-center mb-2">
              
               <h3 className="text-lg font-semibold">EIN/Tax ID number</h3>

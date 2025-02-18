@@ -37,7 +37,7 @@ const likedMember = [
 const DonorProfile = () => {
     const navigation = useNavigate();
     const richColors = [
-        "#FF96AF", "#8B85FF", "#D4FFA8", "#CE9EFF", "#BDBDBD"
+        "#F7194E", "#0C00FF", "#A7FF4E", "#932CFF", "#393939"
     ];
 
     const [currentColor, setCurrentColor] = useState(richColors[0]);
@@ -53,7 +53,7 @@ const DonorProfile = () => {
             <div className='h-25 bg-[#616161] relative'>
                 <div style={{ backgroundColor: currentColor }} className={`absolute top-[100%] shadow-xl left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24  p-5 rounded-full flex justify-center items-center cursor-pointer   transition-colors duration-300 `}>  
                     <div
-                        className={`h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white `}
+                        className={`h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white opacity-90 `}
                         onClick={getRandomColor}
                     >
                         N

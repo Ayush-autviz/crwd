@@ -68,7 +68,7 @@ const SearchScreen = () => {
         <div className="text-2xl   text-center md:text-5xl   font-bold text-[#393939] mb-5">
           Find CRWD and Nonprofits
         </div>
-        <div className="flex flex-row gap-3 md:p-2  p-1 w-full    md:w-[90%] lg:w-[60%] xl:w-[40%]  rounded-full border border=[#393939]">
+        <div className="flex flex-row gap-3 md:p-1  p-1 w-full    md:w-[90%] lg:w-[60%] xl:w-[45%]  rounded-full border border=[#393939]">
           <div className="bg-[#393939] p-3 rounded-full   ">
             <Search color="#fff" className="h-5 w-5 md:h-6 md:w-6" />
           </div>
