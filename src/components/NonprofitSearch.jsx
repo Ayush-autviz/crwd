@@ -54,28 +54,28 @@ const NonProfitSearch = ({ item, isTyping, type }) => {
         <div className="rounded-xl p-4 flex flex-col xl:flex-row   gap-5  bg-[#f3f2f2]">
           <img
             src={item.image}
-            className="rounded-xl w-full h-[200px]    xl:w-[304px] xl:h-[260px] object-right-top object-cover "
+            className="rounded-xl w-full h-[230px]    xl:w-[230px] xl:h-[230px]  object-cover "
           />
-          <div className="flex flex-col gap-2  items-start">
+          <div className="flex flex-col gap-4  items-start">
             <div className="space-y-2">
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-900 line-clamp-1">
                 {item.title}
               </h3>
-              <p className="text-[12px] md:text-[14px]  text-gray-600">
+              <p className="text-[12px] md:text-[14px]  text-gray-600 line-clamp-3">
                 {item.desc}
               </p>
             </div>
-            <div className="flex flex-row items-center gap-5 my-4">
+            <div className="flex flex-row items-center gap-4 flex-wrap ">
               <div className="flex flex-row items-center gap-2">
                 <MapPin className="h-3 w-3 md:h-6 md:w-6" />
-                <div className="text-[12px] md:text-[16px]">
+                <div className="text-[12px] md:text-[16px] font-bold">
                   {item.location}
                 </div>
               </div>
 
               <div className="flex flex-row items-center gap-2">
                 <img src="people.svg" className="h-3 w-3 md:h-6 md:w-6" />
-                <div className="text-[12px] md:text-[16px]">
+                <div className="text-[12px] md:text-[16px] font-bold">
                   {item.members} Members
                 </div>
               </div>
@@ -90,34 +90,27 @@ const NonProfitSearch = ({ item, isTyping, type }) => {
         </div>
       ) : (
         <>
-          <div className="rounded-xl p-4 flex flex-col xl:flex-row   gap-5  bg-[#f3f2f2]">
+          <div className="rounded-xl p-4 flex flex-col xl:flex-row    gap-5  bg-[#f3f2f2]">
+          
             <img
               src="/crwdimg.png"
-              className="rounded-xl w-full h-[200px]    xl:w-[304px] xl:h-[260px] object-right-top object-cover "
+              className="rounded-xl w-full h-[230px]    xl:w-[230px] xl:h-[230px]  object-cover  "
             />
-            <div className="flex flex-col gap-2  items-start">
+            
+            <div className="flex flex-col gap-4  items-start">
               <div className="space-y-2">
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 line-clamp-1">
                   {item.crwdHeading}
                 </h3>
-                <p className="text-[12px] md:text-[14px]  text-gray-600">
+                <p className="text-[12px] md:text-[14px]  text-gray-600 line-clamp-3">
                   {item.crwdDesc}
                 </p>
               </div>
-              <div className="flex flex-row items-center gap-5 my-4">
-                {/* <div className="flex flex-row items-center gap-2">
-                  <MapPin className="h-3 w-3 md:h-6 md:w-6" />
-                  <div className="text-[12px] md:text-[16px]">
-                    {item.location}
-                  </div>
-                </div> */}
-
-                <div className="flex flex-row items-center gap-2">
+               <div className="flex flex-row items-center gap-2">
                   <img src="people.svg" className="h-3 w-3 md:h-6 md:w-6" />
-                  <div className="text-[12px] md:text-[16px]">
+                  <div className="text-[12px] md:text-[16px] font-bold">
                     {item.members} Members
                   </div>
-                </div>
               </div>
               <button
                 onClick={navigateNonprofit}

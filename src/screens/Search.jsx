@@ -64,7 +64,8 @@ const SearchScreen = () => {
   return (
     <div>
       <Header />
-      <div className="flex p-5 md:p-15   xl:p-25  mt-[70px]  flex-col gap-5 justify-center    items-center">
+      <div className="flex p-5 md:p-15   xl:p-25  mt-[70px]  flex-col gap-5 justify-center ">
+        <div className="flex flex-col justify-center items-center">
         <div className="text-2xl   text-center md:text-5xl   font-bold text-[#393939] mb-5">
           Find CRWD and Nonprofits
         </div>
@@ -142,6 +143,8 @@ const SearchScreen = () => {
             </div>
           </div>
         )}
+
+       </div>
 
         {text?.length > 5 ? (
           <div className="flex flex-col items-center justify-center mt-5 md:mt-10 text-center p-4">
