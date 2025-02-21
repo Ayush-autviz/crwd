@@ -5,7 +5,7 @@ export default function TermsConditions() {
         <>
         <div className="mt-[70px]">
             <Header />
-            <div className='bg-[rgba(57,57,57,0.8)]  flex justify-center items-center p-15'>
+            <div className='bg-[#393939] opacity-95  flex justify-center items-center p-15'>
                 <div className="text-2xl text-center text-white md:text-5xl font-bold  mb-2">Terms & Conditions</div>
             </div>
             <div className='p-7 md:p-16  xl:p-25'>

@@ -9,7 +9,7 @@ import About from '../components/AboutUsCard'
 const NonProfit = () => {
   const navigation = useNavigate();
   const richColors = [
-    "#F7194E", "#0C00FF", "#A7FF4E", "#932CFF", "#393939"
+    "#F7194E", "#0C00FF", "#0cc602", "#932CFF", "#393939"
 ];
 
   const [currentColor, setCurrentColor] = useState(richColors[0]);
@@ -23,20 +23,17 @@ const NonProfit = () => {
     <div className='mt-[70px]'>
         <Header/>
         <div className='flex-1 '>
-        <div className='h-25 bg-[#616161] relative'>
-               <div style={{ backgroundColor: currentColor }} className={`absolute top-[100%] shadow-xl left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24  p-5 rounded-full flex justify-center items-center cursor-pointer   transition-colors duration-300 `}>
-                    {/* <img className='h-14 w-14' src='crwd2.svg'/> */}
-                    {/* <div className='h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white'>
-                              N
-                    </div> */}
+        <div style={{ backgroundColor: currentColor }} className='h-25 opacity-75 relative'>
+
+        </div>
+        <div style={{ backgroundColor: currentColor }} className={` mx-auto   shadow-xl border-2 border-white left-1/2 transform  -translate-y-1/2 h-24 w-24  p-5 rounded-full flex justify-center items-center cursor-pointers   transition-colors duration-300 `}>
                     <div 
-      className={`h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white opacity-90 `}
+      className={`h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white  `}
       onClick={getRandomColor}
     >
       A
     </div>
                </div>
-        </div>
 
         <div className="text-center mt-20 flex flex-col justify-center items-center px-2 md:px-6">
         <h1 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">American Cancer Society</h1>

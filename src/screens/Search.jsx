@@ -9,6 +9,7 @@ const crwds = [
     title: "Nonprofits Heading",
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
     image: "np1.svg",
+    crwdimage:"crwd1.svg",
     location: "New York",
     members: 45,
     crwdHeading: "CRWDs Group heading here ",
@@ -19,6 +20,7 @@ const crwds = [
     title: "Nonprofits Heading",
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
     image: "np2.svg",
+    crwdimage:"crwd2.svg",
     location: "Paris",
     members: 45,
     crwdHeading: "CRWDs Group heading here ",
@@ -29,6 +31,7 @@ const crwds = [
     title: "Nonprofits Heading",
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
     image: "np3.svg",
+    crwdimage:"crwd3.svg",
     location: "Nigeria",
     members: 40,
     crwdHeading: "CRWDs Group heading here ",
@@ -70,8 +73,8 @@ const SearchScreen = () => {
           Find CRWD and Nonprofits
         </div>
         <div className="flex flex-row gap-3 md:p-1  p-1 w-full    md:w-[90%] lg:w-[60%] xl:w-[45%]  rounded-full border border=[#393939]">
-          <div className="bg-[#393939] p-3 rounded-full   ">
-            <Search color="#fff" className="h-5 w-5 md:h-6 md:w-6" />
+          <div className="bg-[#F3F3F2] p-3 rounded-full   ">
+            <Search color="#000" className="h-5 w-5 md:h-6 md:w-6" />
           </div>
           <input
             onChange={(e) => setText(e.target.value)}
@@ -161,6 +164,7 @@ const SearchScreen = () => {
             />
           </div>
         ) : (
+          <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {crwds.map((item, index) => {
               return (
@@ -172,6 +176,12 @@ const SearchScreen = () => {
                 />
               );
             })}
+          </div>
+          <div className="flex justify-center mt-12 ">
+          <button className="font-[20px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+          See more
+          </button>
+          </div>
           </div>
         )}
       </div>
