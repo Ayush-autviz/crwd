@@ -46,7 +46,7 @@ const Footer = ({ space }) => {
             <span className="text-gray-400 hidden sm:block">|</span>
 
             <a
-              href="/terms-conditions"
+              href="/terms"
               className="hover:text-[#e6e6e6] text-white"
               text-white
             >
@@ -57,7 +57,7 @@ const Footer = ({ space }) => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#868181] to-transparent h-[1px] w-3/4 mx-auto"></div>
             </div>
             <span className="hidden sm:block text-white">|</span>
-            <a href="/help" className="hover:text-[#e6e6e6] text-white">
+            <a href="/contact" className="hover:text-[#e6e6e6] text-white">
               Help
             </a>
           </div>

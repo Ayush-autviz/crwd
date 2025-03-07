@@ -29,9 +29,7 @@ members:45
 const NonProfitCard = ({item}) => {
   const navigation = useNavigate();
 
-  const navigateNonprofit = ()=>{
-        navigation('/nonprofit');
-  }
+
   return (
     <div className='rounded-xl p-4  bg-white'>
         <img src={item.image} className='rounded-xl w-full md:max-h-[500px] object-cover md:object-contain'/>
@@ -56,7 +54,7 @@ const NonProfitCard = ({item}) => {
             </div>
 
         </div>
-        <button onClick={navigateNonprofit} className="text-[12px] md:text-[18px] px-4 py-2 md:px-8 md:py-3 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium">
+        <button onClick={()=>{navigation("/nonprofit", { state: { image: item.image } })}} className="text-[12px] md:text-[18px] px-4 py-2 md:px-8 md:py-3 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium">
           Donate Now
         </button>
 

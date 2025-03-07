@@ -1,5 +1,6 @@
 import React from 'react'
 import NonProfitCard from './NonProfitCard'
+import { useNavigate } from 'react-router-dom';
 
 const crwds = [
     {
@@ -26,13 +27,14 @@ members:45
 ]
 
 const FindNNonProfits = () => {
+  const navigation= useNavigate();
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 ">
       <div className="text-center mb-12">
         <h1 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">Find Nonprofits</h1>
         <p className="text-[12px] md:text-2xl text-gray-600">
           Check out some CRWD's. If you can't find one that's perfect for you then{" "}
-          <a href="#" className="text-gray-900 underline font-medium">
+          <a href="/start" className="text-gray-900 underline font-medium">
             Start a CRWD
           </a>
         </p>
@@ -47,7 +49,7 @@ const FindNNonProfits = () => {
       </div>
 
       <div className="flex justify-center mt-12">
-        <button className="px-8 py-3 rounded-full border hover:shadow-xl transition-shadow cursor-pointer   text-gray-700 hover:text-gray-900 font-medium">
+        <button onClick={()=>{navigation("search")}} className="px-8 py-3 rounded-full border hover:shadow-xl transition-shadow cursor-pointer   text-gray-700 hover:text-gray-900 font-medium">
           See more
         </button>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import CRWDcard from './CRWDcard'
+import { useNavigate } from 'react-router-dom'
 
 const crwds = [
     {
@@ -33,13 +34,14 @@ const crwds = [
   ]
 
 const FindCRWD = () => {
+  const navigation= useNavigate();
   return (
     <div className="max-w-7xl mx-auto px-4 mt-[30px] md:mt-[100px]">
       <div className="text-center mb-12">
         <h1 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">Find your CRWD</h1>
         <p className="text-[#393939] text-[12px]  md:text-xl">
           Check out some CRWD's. If you can't find one that's perfect for you then{" "}
-          <a href="#" className="text-gray-900 underline font-bold">
+          <a href="start" className="text-gray-900 underline font-bold">
             Start a CRWD
           </a>
         </p>
@@ -56,7 +58,7 @@ const FindCRWD = () => {
       </div>
 
       <div className="flex justify-center mt-12 ">
-        <button className="font-[20px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+        <button onClick={()=>{navigation("search")}} className="font-[20px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
           See more
         </button>
       </div>
