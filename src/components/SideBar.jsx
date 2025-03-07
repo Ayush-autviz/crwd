@@ -4,6 +4,18 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = ({ isOpen, onClose }) => {
   const navigation = useNavigate();
 
+  const handleDonate = ()=>{
+      navigation("/search")
+  }
+
+  const handleAbout = ()=>{
+    navigation("/about")
+  }
+
+  const handleHelp = ()=>{
+    navigation("/contact")
+  }
+
   return (
     <>
       {/* Backdrop for blur effect */}
@@ -28,7 +40,7 @@ const Sidebar = ({ isOpen, onClose }) => {
             <X color="#000" className="h-7 w-7" />
           </div>
           <div className="flex flex-col gap-4 mt-15">
-            <div className="flex flex-row justify-between cursor-pointer hover:bg-[#F3F3F2] rounded-xl items-center px-2 py-4">
+            <div onClick={handleDonate} className="flex flex-row justify-between cursor-pointer hover:bg-[#F3F3F2] rounded-xl items-center px-2 py-4">
               <div className="flex flex-col ">
                 <div>Donate</div>
                 <div className="text-gray-400">Discover Fundraiser to support</div>
@@ -36,7 +48,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               <ChevronRight />
             </div>
 
-            <div className="flex flex-row justify-between cursor-pointer hover:bg-[#F3F3F2] rounded-xl items-center px-2 py-4">
+            <div onClick={handleAbout} className="flex flex-row justify-between cursor-pointer hover:bg-[#F3F3F2] rounded-xl items-center px-2 py-4">
               <div className="flex flex-col ">
                 <div>About</div>
                 <div className="text-gray-400">How it works Pricing and More</div>
@@ -44,7 +56,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               <ChevronRight />
             </div>
 
-            <div className="flex flex-row justify-between cursor-pointer hover:bg-[#F3F3F2] rounded-xl items-center px-2 py-4">
+            <div onClick={handleHelp} className="flex flex-row justify-between cursor-pointer hover:bg-[#F3F3F2] rounded-xl items-center px-2 py-4">
               <div className="flex flex-col ">
                 <div>Help Center</div>
                 <div className="text-gray-400">Technical support and help</div>

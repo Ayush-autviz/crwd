@@ -60,22 +60,34 @@ const DonorProfile = () => {
                     </div>
                 </div>
             </div>
+            {/* <div className="mt-4 flex w-full  justify-center gap-5 items-center text-[#000] p-8 mx-4 md:mx-10 lg:mx-20">
+              <div className="bg-[#F3F3F2] h-1 rounded-full w-full" />
+              <div style={{ backgroundColor: currentColor }} className={` shadow-xl  h-24 w-24  p-5 rounded-full flex justify-center items-center cursor-pointer   transition-colors duration-300 `}>  
+                    <div
+                        className={`h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white opacity-90 `}
+                        onClick={getRandomColor}
+                    >
+                        N
+                    </div>
+                </div>
+            <div className="bg-[#F3F3F2] h-1 rounded-full w-full" />
+            </div> */}
             <div className="text-2xl text-center  md:text-4xl text-[#373737] font-bold  mt-20">Natalie Root</div>
 
-            <div className={`bg-[url('/bg-covers/bgprofile.svg')] rounded-2xl flex flex-col justify-center items-center mt-10 p-8 mx-4 md:mx-10 lg:mx-20`}>
+            <div className={` rounded-2xl bg-[#F3F3F2] flex flex-col justify-center items-center mt-10 p-8 mx-4 md:mx-10 lg:mx-20`}>
                 <img src='profile1.svg' className='md:h-30 md:w-30 w-20 h-20 rounded-full'/>
-                <div className="text-xl text-center  md:text-2xl text-white font-bold  mt-5">100+ Women Who Care- Pinellas Countyalie Root</div>
+                <div className="text-xl text-center  md:text-2xl text-[#373737] font-bold  mt-5">100+ Women Who Care- Pinellas Countyalie Root</div>
                 <div className="w-[30%] h-[1px] mt-4 mb-2 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#868181] to-transparent h-px"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#868181] to-transparent h-[1px] w-3/4 mx-auto"></div>
     </div>
-               <div className='text-white text-lg md:text-xl'> 378 Members</div>
+               <div className='text-[#373737] text-lg md:text-xl'> 378 Members</div>
                 <div className="w-[30%] h-[1px] mt-2  relative">
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#868181] to-transparent h-px"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#868181] to-transparent h-[1px] w-3/4 mx-auto"></div>
     </div>  
 
-    <div className='text-sm text-center text-white  md:text-lg mt-4 '>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo </div>
+    <div className='text-sm text-center text-[#373737]  md:text-lg mt-4 '>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo </div>
     <div className="flex items-center justify-center  space-x-[-7px] md:space-x-[-10px] mt-5">
             {likedMember.map((member) => (
                                                 <div key={member.id} className="relative w-7 h-7 md:w-10 md:h-10">

@@ -13,11 +13,11 @@ export default function HeroImage({ img, title, content }) {
                 <div className="px-4 py-10 md:px-10 lg:px-20">
                     {/* Hero Section UI */}
                     <h1 className="text-2xl text-center md:text-5xl font-bold text-[#393939] mb-2">{title}</h1>
-                    <p className="text-center md:w-[86%] md:text-xl paragraph mx-auto">{content}</p>
+                    {/* <p className="text-center md:w-[86%] md:text-xl paragraph mx-auto">{content}</p> */}
 
                     {/* img section */}
                     <div className="mt-[30px] md:mt-[50px]">
-                        <img src="/Rectangle 442.png" alt="" className="w-full mx-auto bg-cover" />
+                        <img src="/Rectangle 442.png" alt="" className="w-[90%] mx-auto bg-cover" />
                     </div>
 
                     {/* button section */}

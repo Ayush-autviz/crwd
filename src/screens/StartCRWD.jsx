@@ -1,3 +1,4 @@
+import { ChevronLeft } from 'lucide-react';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
@@ -8,7 +9,16 @@ const StartCRWD = () => {
     <div className='flex justify-center items-center min-h-screen my-4 bg-cover bg-no-repeat'>
     
       <div className='bg-white shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:px-10 md:py-6 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[35%]'>
+      <div className='flex flex-row w-full  justify-center items-center relative'>
+      <div onClick={()=>{navigation("/")}} className="flex flex-row cursor-pointer items-center justify-center gap-[2px] absolute left-0">
+        {/* <div className="h-6 w-6 hover:bg-[#F3F3F2] cursor-pointer justify-center items-center flex rounded-full">
+         
+         </div> */}
+         <ChevronLeft color="#000" className="h-6 w-6"  />
+          <div className="hidden md:block sm:text-sm md:text-[18px]">Back</div>
+        </div>
         <img src='crwd.png' className='h-6 sm:h-7 md:h-8' />
+        </div>
         <div className="mt-4 flex w-full  justify-center gap-2 items-center text-[#000]">
           <hr className="border-[#989898] w-full" />
         </div>

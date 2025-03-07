@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom'
+import Modal1 from '../components/Modal1'
+import Modal2 from '../components/Modal2'
+import Modal3 from '../components/Modal3'
 
 const donations = [
     {
@@ -54,6 +57,9 @@ const Contactdetails = [
 
 const Settings = () => {
     const navigation = useNavigate();
+    const [openModal1,setopenModal1] = useState(false);
+    const [openModal2,setopenModal2] = useState(false);
+    const [openModal3,setopenModal3] = useState(false);
     return (
         <div className='mt-[70px]'>
             <Header />
@@ -108,7 +114,7 @@ const Settings = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=' md:py-2 p-3 h-fit rounded-full md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
+                        <div onClick={()=>{setopenModal1(true)}} className=' md:py-2 p-3 h-fit rounded-full md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
                             <img src='edit.svg' className='h-4 w-4 font-semibold' />
                             <div className='font-semibold hidden md:block  text-[11px] text-white md:text-[15px]'>Edit</div>
                         </div>
@@ -119,7 +125,7 @@ const Settings = () => {
                 <div className='rounded-2xl border border-[#838383] w-full p-5 mt-10  md:p-7 '>
                     <div className='flex flex-row justify-between items-center  w-full'>
                         <div className='font-semibold text-xl md:text-left text-center md:text-2xl  my-2'>Your Profile</div>
-                        <div className=' md:py-2  h-fit rounded-full p-3 md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
+                        <div onClick={()=>{setopenModal2(true)}}  className=' md:py-2  h-fit rounded-full p-3 md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
                             <img src='edit.svg' className='h-4 w-4 font-semibold' />
                             <div className='font-semibold hidden md:block text-[11px] text-white md:text-[15px]'>Edit</div>
                         </div>
@@ -150,14 +156,14 @@ const Settings = () => {
                                 })
                             }
                         </div>
-
+{/* 
                         <div className="flex items-center gap-2 mt-5 ">
                             <input
                                 type="checkbox"
                                 className="w-4 h-4 rounded-[4px] border-2 border-[#393939]  accent-[#393939]"
                             />
                             <div className="className='font-semibold text-sm md:text-lg">Nonprofits</div>
-                        </div>
+                        </div> */}
 
 
 
@@ -168,7 +174,7 @@ const Settings = () => {
                 <div className='rounded-2xl border border-[#838383] w-full p-5 mt-10  md:p-7 mb-30 '>
                     <div className='flex flex-row justify-between items-center  w-full'>
                         <div className='font-semibold text-xl md:text-left text-center md:text-2xl  my-2'>Account Setting</div>
-                        <div className=' md:py-2 p-3  h-fit rounded-full md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
+                        <div onClick={()=>{setopenModal3(true)}}  className=' md:py-2 p-3  h-fit rounded-full md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
                             <img src='edit.svg' className='h-4 w-4 font-semibold' />
                             <div className='font-semibold hidden md:block text-[11px] text-white md:text-[15px]'>Edit</div>
                         </div>
@@ -203,6 +209,9 @@ const Settings = () => {
 
 
             <Footer />
+            <Modal1 isModalOpen={openModal1} setIsModalOpen={setopenModal1}  />
+            <Modal2  isModalOpen={openModal2} setIsModalOpen={setopenModal2} />
+            <Modal3 isModalOpen={openModal3} setIsModalOpen={setopenModal3} />
         </div>
     )
 }
