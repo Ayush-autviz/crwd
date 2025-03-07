@@ -29,7 +29,7 @@ export default function ReviewCards() {
                         {/* img N comment section */}
                         <div className="flex gap-2 md:gap-6">
                             {/* img is here */}
-                            <img onClick={navigation('/natalie-root')} src="/Ellipse 225.png" alt="" className="w-[45px] h-[45px] md:w-[100px] md:h-[100px] rounded-full " />
+                            <img onClick={()=>{navigation('/natalie-root')}} src="/Ellipse 225.png" alt="" className="w-[45px] h-[45px] md:w-[100px] md:h-[100px] rounded-full " />
 
                             {/* Comment section */}
                             <div className="bg-[#F8F8F8] p-[14px] rounded-[10px] md:p-[30px] w-full md:rounded-[20px]">
