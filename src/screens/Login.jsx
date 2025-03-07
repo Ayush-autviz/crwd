@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+  const navigation = useNavigate();
   return (
     <div className='h-screen  relative flex justify-center items-center bg-[url(authbg.svg)] bg-cover bg-no-repeat'>
         <div className='bg-white shadow-[0px_0px_24px_1px_rgba(0,_0,_0,_0.1)] rounded-2xl px-4 py-6 md:px-10 md:py-6 flex flex-col justify-center items-center w-[90%] md:w-[55%] xl:w-[32%]'>
@@ -46,6 +48,7 @@ const Login = () => {
                 placeholder="Email Address"
             />
             <button
+            onClick={()=>{navigation('/')}}
                 className="bg-[#393939] mt-4 text-[10px] md:text-[14px]  rounded-full cursor-pointer text-white py-3 md:py-3 w-full  hover:shadow-xl"
               >
                 Continue

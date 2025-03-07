@@ -49,6 +49,7 @@ const Login = () => {
                     </button>
                 </div>
                 <button
+                 onClick={()=>{navigation('/')}}
                     className="bg-[#393939] mt-4 text-[10px] md:text-[14px]  rounded-full cursor-pointer text-white py-3 md:py-3 w-full  hover:shadow-xl "
                 >
                     Sign up
