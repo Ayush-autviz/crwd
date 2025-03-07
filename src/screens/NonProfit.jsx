@@ -70,7 +70,7 @@ const NonProfit = () => {
           <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png" alt="Crowd" />
         </button>
         
-        <button className="font-black text-[16px] justify-center items-center flex-1 md:flex-none md:w-fit cursor-pointer h-11 w-fit px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+        <button  onClick={() => navigation('/donation')}  className="font-black text-[16px] justify-center items-center flex-1 md:flex-none md:w-fit cursor-pointer h-11 w-fit px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
           Donate Now
         </button>
 
