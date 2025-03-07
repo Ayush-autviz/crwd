@@ -19,8 +19,18 @@ const likedMember = [
 
 export default function ReviewCards() {
     const navigation = useNavigate()
-    const [likes, setLikes] = useState(3500) // Initial like count (3.5K)
+    const [likes, setLikes] = useState(3500)
     const [isLiked, setIsLiked] = useState(false)
+    const [comments, setComments] = useState([
+        {
+            id: 1,
+            name: "Erick John",
+            image: "/Ellipse 226.png",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
+            date: "Feb 7, 2025"
+        }
+    ])
+    const [newComment, setNewComment] = useState("")
 
     const handleLike = () => {
         if (isLiked) {
@@ -33,7 +43,6 @@ export default function ReviewCards() {
     }
 
     const handleShare = () => {
-        // Try to use Web Share API if available
         if (navigator.share) {
             navigator.share({
                 title: 'Check out this review',
@@ -43,10 +52,23 @@ export default function ReviewCards() {
             .then(() => console.log('Successful share'))
             .catch((error) => console.log('Error sharing', error));
         } else {
-            // Fallback: Copy URL to clipboard
             navigator.clipboard.writeText(window.location.href)
                 .then(() => alert('Link copied to clipboard!'))
                 .catch(() => alert('Failed to copy link'))
+        }
+    }
+
+    const handleCommentSubmit = (e) => {
+        e.preventDefault()
+        if (newComment.trim()) {
+            setComments([...comments, {
+                id: comments.length + 1,
+                name: "Current User", // You might want to get this from auth context
+                image: "/Ellipse 225.png", // You might want to get this from user profile
+                text: newComment,
+                date: new Date().toLocaleDateString()
+            }])
+            setNewComment("")
         }
     }
 
@@ -86,7 +108,7 @@ export default function ReviewCards() {
                                     <div className="flex gap-2 md:gap-4 items-center mt-[15px] md:mt-[30px]">
                                         <button 
                                             onClick={handleLike}
-                                            className="cursor-pointer shareBtns bg-transparent border-none flex items-center gap-2 text-[#5E5E5E] text-[12px] md:text-[16px] font-bold"
+                                            className={`cursor-pointer shareBtns bg-transparent border-none flex items-center gap-2 text-[12px] md:text-[16px] font-bold ${isLiked ? 'text-red-500' : 'text-[#5E5E5E]'}`}
                                         >
                                             <span className="h-3 w-3 md:h-5 md:w-5">
                                                 {likeIcon}
@@ -120,24 +142,54 @@ export default function ReviewCards() {
                                     </div>
                                 </div>
 
-                                <div className="flex gap-[18px] items-start mt-6">
-                                    <img                                 onClick={() => navigation("/profile", { 
-                                    state: { image: 'Ellipse 226.png', name: "Erick John" }
-                                })}  src="/Ellipse 226.png" alt="..." className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full" />
-                                    <div>
-                                        <div className="border border-[#989898] rounded-[10px] px-3 py-2 md:rounded-[20px] md:px-6 md:py-5">
-                                            <h4 className="text-[18px] md:text-xl font-medium">Erick John</h4>
-                                            <p className="text-[12px] md:text-[16px] mt-1 md:mt-4 font-normal w-full md:text-lg md:w-[70%]">
-                                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-                                            </p>
+                                {/* Comments Section */}
+                                <div className="mt-6">
+                                    {comments.map((comment) => (
+                                        <div key={comment.id} className="flex gap-[18px] items-start mb-6">
+                                            <img
+                                                onClick={() => navigation("/profile", { 
+                                                    state: { image: comment.image, name: comment.name }
+                                                })}
+                                                src={comment.image}
+                                                alt="..."
+                                                className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full cursor-pointer"
+                                            />
+                                            <div className="w-full">
+                                                <div className="border border-[#989898] rounded-[10px] px-3 py-2 md:rounded-[20px] md:px-6 md:py-5">
+                                                    <h4 className="text-[18px] md:text-xl font-medium">{comment.name}</h4>
+                                                    <p className="text-[12px] md:text-[16px] mt-1 md:mt-4 font-normal w-full md:text-lg md:w-[70%]">
+                                                        {comment.text}
+                                                    </p>
+                                                    <span className="text-[10px] md:text-[12px] text-[#5E5E5E] mt-2 block">{comment.date}</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="mt-[15px] md:mt-[30px]">
-                                            <button className="bg-white cursor-pointer px-6 py-3 md:px-12 md:py-3 text-[14px] md:text-[16px] rounded-full border">
-                                                <span className="hidden md:inline">join now to </span>
-                                                comment
-                                            </button>   
+                                    ))}
+
+                                    {/* Comment Input */}
+                                    <form onSubmit={handleCommentSubmit} className="mt-6">
+                                        <div className="flex gap-4 items-start">
+                                            <img 
+                                                src="/Ellipse 225.png" 
+                                                alt="Current User" 
+                                                className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full"
+                                            />
+                                            <div className="w-full">
+                                                <textarea
+                                                    value={newComment}
+                                                    onChange={(e) => setNewComment(e.target.value)}
+                                                    placeholder="Write a comment..."
+                                                    className="w-full border border-[#989898] outline-none rounded-[10px] px-3 py-2 md:rounded-[20px] md:px-6 md:py-5 text-[14px] md:text-[16px] resize-none h-[100px]"
+                                                />
+                                                <button 
+                                                    type="submit"
+                                                    className="mt-3 bg-white cursor-pointer px-6 py-3 md:px-12 md:py-3 text-[14px] md:text-[16px] rounded-full border hover:bg-gray-100"
+                                                >
+                                                    Post Comment
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
