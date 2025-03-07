@@ -38,6 +38,7 @@ const DonorProfile = () => {
     const navigation = useNavigate();
     const location = useLocation();
     const image = location.state?.image; 
+    const name = location.state?.name; 
     const richColors = [
         "#F7194E", "#0C00FF", "#A7FF4E", "#932CFF", "#393939"
     ];
@@ -86,7 +87,7 @@ const DonorProfile = () => {
                 </div>
             <div className="bg-[#F3F3F2] h-1 rounded-full w-full" />
             </div> */}
-            <div className="text-2xl text-center  md:text-4xl text-[#373737] font-bold  mt-20">Natalie Root</div>
+            <div className="text-2xl text-center  md:text-4xl text-[#373737] font-bold  mt-20">{name?name:"Natalie Root"}</div>
 
             <div className={` rounded-2xl bg-[#F3F3F2] flex flex-col justify-center items-center mt-10 p-8 mx-4 md:mx-10 lg:mx-20`}>
                 <img src='profile1.svg' className='md:h-30 md:w-30 w-20 h-20 rounded-full'/>

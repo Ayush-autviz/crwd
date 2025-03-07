@@ -121,7 +121,9 @@ export default function ReviewCards() {
                                 </div>
 
                                 <div className="flex gap-[18px] items-start mt-6">
-                                    <img src="/Ellipse 226.png" alt="..." className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full" />
+                                    <img                                 onClick={() => navigation("/natalie-root", { 
+                                    state: { image: 'Ellipse 226.png', name: "Erick John" }
+                                })}  src="/Ellipse 226.png" alt="..." className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full" />
                                     <div>
                                         <div className="border border-[#989898] rounded-[10px] px-3 py-2 md:rounded-[20px] md:px-6 md:py-5">
                                             <h4 className="text-[18px] md:text-xl font-medium">Erick John</h4>
