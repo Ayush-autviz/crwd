@@ -59,7 +59,7 @@ export default function ReviewCards() {
                     <div className="mt-5 md:mt-[50px]">
                         <div className="flex gap-2 md:gap-6">
                             <img 
-                                onClick={() => navigation("/natalie-root", { 
+                                onClick={() => navigation("/profile", { 
                                     state: { image: 'Ellipse 225.png', name: "Larry Hudlemeyer" }
                                 })} 
                                 src="/Ellipse 225.png" 
@@ -121,7 +121,7 @@ export default function ReviewCards() {
                                 </div>
 
                                 <div className="flex gap-[18px] items-start mt-6">
-                                    <img                                 onClick={() => navigation("/natalie-root", { 
+                                    <img                                 onClick={() => navigation("/profile", { 
                                     state: { image: 'Ellipse 226.png', name: "Erick John" }
                                 })}  src="/Ellipse 226.png" alt="..." className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full" />
                                     <div>

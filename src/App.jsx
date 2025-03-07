@@ -38,6 +38,7 @@ const App = () => {
           <Route path="/search" element={<SearchScreen />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/natalie-root" element={<DonorProfile />} />
+          <Route path="/profile" element={<DonorProfile />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsConditions />} />
         </Routes>
