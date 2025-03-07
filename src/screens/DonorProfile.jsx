@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Divider from '../components/Divider';
 import LogoNtitleCard from '../components/LogoNtitleCard';
 import Footer from '../components/Footer';
@@ -36,6 +36,8 @@ const likedMember = [
 
 const DonorProfile = () => {
     const navigation = useNavigate();
+    const location = useLocation();
+    const image = location.state?.image; 
     const richColors = [
         "#F7194E", "#0C00FF", "#A7FF4E", "#932CFF", "#393939"
     ];
@@ -47,19 +49,31 @@ const DonorProfile = () => {
         const randomIndex = Math.floor(Math.random() * richColors.length);
         setCurrentColor(richColors[randomIndex]);
     };
+
+
     return (
         <div className='mt-[70px] '>
             <Header />
-            <div className='h-25 bg-[#616161] relative'>
-                <div style={{ backgroundColor: currentColor }} className={`absolute top-[100%] shadow-xl left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24  p-5 rounded-full flex justify-center items-center cursor-pointer   transition-colors duration-300 `}>  
-                    <div
-                        className={`h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white opacity-90 `}
-                        onClick={getRandomColor}
-                    >
-                        N
+            {
+                image ? (
+                    <div className='h-25 bg-[#616161] relative'>
+                    <img src={image}  className={`absolute top-[100%] z-30 shadow-xl left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24   rounded-full flex justify-center items-center cursor-pointer   transition-colors duration-300 `}/>  
+
+                </div>
+                ) : (
+                    <div className='h-25 bg-[#616161] relative'>
+                    <div style={{ backgroundColor: currentColor }} className={`absolute top-[100%] shadow-xl left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24  p-5 rounded-full flex justify-center items-center cursor-pointer   transition-colors duration-300 `}>  
+                        <div
+                            className={`h-14 w-14 text-4xl font-semibold flex justify-center items-center text-white opacity-90 `}
+                            onClick={getRandomColor}
+                        >
+                            N
+                        </div>
                     </div>
                 </div>
-            </div>
+                )
+            }
+
             {/* <div className="mt-4 flex w-full  justify-center gap-5 items-center text-[#000] p-8 mx-4 md:mx-10 lg:mx-20">
               <div className="bg-[#F3F3F2] h-1 rounded-full w-full" />
               <div style={{ backgroundColor: currentColor }} className={` shadow-xl  h-24 w-24  p-5 rounded-full flex justify-center items-center cursor-pointer   transition-colors duration-300 `}>  

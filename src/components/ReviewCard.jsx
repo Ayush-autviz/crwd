@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 const likeIcon = <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,6 +19,37 @@ const likedMember = [
 
 export default function ReviewCards() {
     const navigation = useNavigate()
+    const [likes, setLikes] = useState(3500) // Initial like count (3.5K)
+    const [isLiked, setIsLiked] = useState(false)
+
+    const handleLike = () => {
+        if (isLiked) {
+            setLikes(likes - 1)
+            setIsLiked(false)
+        } else {
+            setLikes(likes + 1)
+            setIsLiked(true)
+        }
+    }
+
+    const handleShare = () => {
+        // Try to use Web Share API if available
+        if (navigator.share) {
+            navigator.share({
+                title: 'Check out this review',
+                text: "Creating Opportunities for those who serve - Larry Hudlemeyer",
+                url: window.location.href,
+            })
+            .then(() => console.log('Successful share'))
+            .catch((error) => console.log('Error sharing', error));
+        } else {
+            // Fallback: Copy URL to clipboard
+            navigator.clipboard.writeText(window.location.href)
+                .then(() => alert('Link copied to clipboard!'))
+                .catch(() => alert('Failed to copy link'))
+        }
+    }
+
     return (
         <>
             <div className="px-4 md:px-10 lg:px-20">
@@ -25,46 +57,53 @@ export default function ReviewCards() {
                     <h1 className="font-semibold text-center leading-16 text-2xl text-[#393939] md:text-5xl">Join The Discussion</h1>
 
                     <div className="mt-5 md:mt-[50px]">
-
-                        {/* img N comment section */}
                         <div className="flex gap-2 md:gap-6">
-                            {/* img is here */}
-                            <img onClick={()=>{navigation('/natalie-root')}} src="/Ellipse 225.png" alt="" className="w-[45px] h-[45px] md:w-[100px] md:h-[100px] rounded-full " />
+                            <img 
+                                onClick={() => navigation("/natalie-root", { 
+                                    state: { image: 'Ellipse 225.png', name: "Larry Hudlemeyer" }
+                                })} 
+                                src="/Ellipse 225.png" 
+                                alt="" 
+                                className="w-[45px] h-[45px] md:w-[100px] md:h-[100px] rounded-full cursor-pointer" 
+                            />
 
-                            {/* Comment section */}
                             <div className="bg-[#F8F8F8] p-[14px] rounded-[10px] md:p-[30px] w-full md:rounded-[20px]">
-                                {/* commented container */}
                                 <div className="border-b border-[#999999]">
                                     <h4 className="text-[#373737] text-[18px] md:text-2xl font-semibold mb-6">Larry Hudlemeyer</h4>
                                     <div className="content is here">
                                         <span className="block w-full text-[#5E5E5E] text-[12px] md:text-[14px] font-medium">
-                                            " Creating Opportunities for those who serve"
+                                            "Creating Opportunities for those who serve"
                                         </span>
-
-                                        <span className="mb-4 block w-full text-[#3A3A3A] ext-[12px] md:text-[14px] font-semibold">
+                                        <span className="mb-4 block w-full text-[#3A3A3A] text-[12px] md:text-[14px] font-semibold">
                                             Feb 7,2025
                                         </span>
-
-                                        <p className="text-[12px] md:text-[16px] font-normal text-[#393939]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-                                            luptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                        <p className="text-[12px] md:text-[16px] font-normal text-[#393939]">
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                                            luptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                                        </p>
                                     </div>
 
-
-                                    {/* like and share btn */}
                                     <div className="flex gap-2 md:gap-4 items-center mt-[15px] md:mt-[30px]">
-                                        <button className="cursor-pointer shareBtns bg-transparent border-none flex items-center gap-2 text-[#5E5E5E] text-[12px] md:text-[16px] font-bold" >
-                                           <span className="h-3 w-3 md:h-5 md:w-5 "> 
-                                           <img src="like.svg" className="h-3 w-3  md:h-5 md:w-5"/>
-                                           </span> Like
+                                        <button 
+                                            onClick={handleLike}
+                                            className="cursor-pointer shareBtns bg-transparent border-none flex items-center gap-2 text-[#5E5E5E] text-[12px] md:text-[16px] font-bold"
+                                        >
+                                            <span className="h-3 w-3 md:h-5 md:w-5">
+                                                {likeIcon}
+                                            </span>
+                                            Like {isLiked ? '(Liked)' : ''}
                                         </button>
-                                        <button className="cursor-pointer shareBtns bg-transparent border-none flex items-center gap-2 text-[#5E5E5E] text-[10px] md:text-base font-bold" >
-                                        <img src="share.svg"  className="h-3 w-3  md:h-5 md:w-5"/>
+                                        <button 
+                                            onClick={handleShare}
+                                            className="cursor-pointer shareBtns bg-transparent border-none flex items-center gap-2 text-[#5E5E5E] text-[10px] md:text-base font-bold"
+                                        >
+                                            {shareIcon}
                                             Share
                                         </button>
                                     </div>
 
-                                    <div className="my-2.5 md:my-4  flex items-center">
-                                        <div className="flex items-center justify-center  space-x-[-7px] md:space-x-[-10px]">
+                                    <div className="my-2.5 md:my-4 flex items-center">
+                                        <div className="flex items-center justify-center space-x-[-7px] md:space-x-[-10px]">
                                             {likedMember.map((member) => (
                                                 <div key={member.id} className="relative w-5 h-5 md:w-8 md:h-8">
                                                     <img
@@ -75,34 +114,32 @@ export default function ReviewCards() {
                                                 </div>
                                             ))}
                                         </div>
-
-                                        <p className="text-[12px]   md:text-[16px] font-medium ml-1.5">3.5K Likes</p>
+                                        <p className="text-[12px] md:text-[16px] font-medium ml-1.5">
+                                            {(likes / 1000).toFixed(1)}K Likes
+                                        </p>
                                     </div>
                                 </div>
 
-                                {/* abb karu ga comment mai!!! */}
                                 <div className="flex gap-[18px] items-start mt-6">
                                     <img src="/Ellipse 226.png" alt="..." className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full" />
-
                                     <div>
                                         <div className="border border-[#989898] rounded-[10px] px-3 py-2 md:rounded-[20px] md:px-6 md:py-5">
                                             <h4 className="text-[18px] md:text-xl font-medium">Erick John</h4>
-                                            <p className="text-[12px]   md:text-[16px] mt-1 md:mt-4 font-normal w-full md:text-lg md:w-[70%]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                            <p className="text-[12px] md:text-[16px] mt-1 md:mt-4 font-normal w-full md:text-lg md:w-[70%]">
+                                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                                            </p>
                                         </div>
-
                                         <div className="mt-[15px] md:mt-[30px]">
-                                        <button className="bg-white cursor-pointer px-6 py-3 md:px-12 md:py-3 text-[14px] md:text-[16px] rounded-full border">
-      <span className="hidden md:inline">join now to </span>
-      comment
-    </button>   
+                                            <button className="bg-white cursor-pointer px-6 py-3 md:px-12 md:py-3 text-[14px] md:text-[16px] rounded-full border">
+                                                <span className="hidden md:inline">join now to </span>
+                                                comment
+                                            </button>   
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </>
