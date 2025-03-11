@@ -21,7 +21,7 @@ export default function LogoNtitleCard({ data }) {
                             <>
                                 <div 
                                 onClick={()=>{navigation("/nonprofit", { state: { image: i.img,name:i.title } })}}
-                                className="bg-[#F3F3F2] rounded-xl p-3 md:px-[25px] md:py-[15px] flex items-center gap-4 md:gap-11">
+                                className="bg-[#F3F3F2] cursor-pointer rounded-xl p-3 md:px-[25px] md:py-[15px] flex items-center gap-4 md:gap-11">
                                     <div className="bg-white px-3 py-2 md:px-7 md:py-5 h-ful flex justify-center items-center w-fit h-fit rounded-xl">
                                         <img src={i.img} alt="" className="w-[75.3px] h-[75.3px] md:w-[110px] md:h8-[110px] object-contain" />
                                     </div>

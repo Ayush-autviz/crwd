@@ -87,7 +87,7 @@ const NonprofitShowcase = () => {
               <div
                 onClick={()=>{navigation("/nonprofit", { state: { image: nonprofit.logo,name:nonprofit.name } })}}
                 key={nonprofit.id}
-                className="flex-none w-76 md:w-96 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
+                className="flex-none cursor-pointer w-76 md:w-96 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
               >
                 <div className={`rounded-2xl overflow-hidden  bg-[#F3F3F2]`}>
                   <div className="p-8">
