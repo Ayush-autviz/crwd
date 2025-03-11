@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigation = useNavigate();
 
   const cards = [
     {
@@ -59,10 +61,11 @@ const Slider = () => {
             {cards.map((card, index) => (
               <div key={index} className="w-full  md:w-1/2 xl:w-1/3 flex-shrink-0 px-2">
                 <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
-                  <img 
+                  <img  
+                    onClick={()=>{navigation("/crwd", { state: { image: card.image } })}}
                     src={card.image} 
                     alt={`Slide ${index + 1}`}
-                    className="w-full h-74 object-cover"
+                    className="w-full h-74 object-cover cursor-pointer"
                   />
                   <div className="absolute bottom-4 left-4 right-4 bg-white rounded-lg p-4 shadow">
                     <h3 className="text-lg font-semibold">{card.title}</h3>

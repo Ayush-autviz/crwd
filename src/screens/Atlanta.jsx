@@ -6,6 +6,7 @@ import HeroImage from "../components/Herosection-img";
 import AboutUs from '../components/AboutUs'
 import LogoNtitleCard from '../components/LogoNtitleCard'
 import NonprofitShowcase from "../components/NonProfitShowcase";
+import { useLocation } from "react-router-dom";
 
 
 const cardData = [
@@ -33,12 +34,14 @@ const cardData = [
 
 
 export default function Atlanta() {
+    const location = useLocation();
+    const image = location.state?.image;
     return (
         <>
             <div className="mt-[70px]">
                 <Header />
 
-                <HeroImage img='background.png'
+                <HeroImage img={image}
                     title='This group is to help Atlanta families'
                     content='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.' />
 

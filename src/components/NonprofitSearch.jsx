@@ -51,7 +51,7 @@ const NonProfitSearch = ({ item, isTyping, type }) => {
   return (
     <>
       {type === "nonprofits" ? (
-    <div className="rounded-xl p-4 flex flex-col xl:flex-row gap-5 bg-[#f3f2f2]">
+    <div  onClick={()=>{navigation("/nonprofit", { state: { image: item.image,name:item.title } })}} className="rounded-xl p-4 flex flex-col xl:flex-row gap-5 bg-[#f3f2f2]">
     <img
       src={item.image}
       alt={item.title}
@@ -81,7 +81,7 @@ const NonProfitSearch = ({ item, isTyping, type }) => {
         </div>
       </div>
       <button
-        onClick={navigateNonprofit}
+        onClick={()=>{navigation("/nonprofit", { state: { image: nonprofit.logo,name:nonprofit.name } })}}
         className="text-[12px] md:text-[14px] px-4 py-2 md:px-8 md:py-2 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium"
       >
         Donate Now
@@ -90,7 +90,7 @@ const NonProfitSearch = ({ item, isTyping, type }) => {
   </div>
       ) : (
         <>
-    <div className="rounded-xl p-4 flex flex-col xl:flex-row gap-5 bg-[#f3f2f2]">
+    <div onClick={()=>{navigation("/crwd", { state: { image: item.crwdimage } })}} className="rounded-xl p-4 flex flex-col xl:flex-row gap-5 bg-[#f3f2f2]">
       <div className="flex justify-center items-center rounded-xl w-full xl:w-[230px] xl:min-w-[230px] h-[230px] bg-white">
         <img 
           src={item.crwdimage}
@@ -114,7 +114,7 @@ const NonProfitSearch = ({ item, isTyping, type }) => {
           </div>
         </div>
         <button
-          onClick={navigateNonprofit}
+          onClick={()=>{navigation("/crwd", { state: { image: item.crwdimage } })}}
           className="text-[12px] md:text-[14px] px-4 py-2 md:px-8 md:py-2 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium"
         >
           Donate Now

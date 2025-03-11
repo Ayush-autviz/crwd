@@ -17,7 +17,7 @@ export default function HeroImage({ img, title, content }) {
 
                     {/* img section */}
                     <div className="mt-[30px] md:mt-[50px]">
-                        <img src="/Rectangle 442.png" alt="" className="w-[90%] mx-auto bg-cover" />
+                        <img src={img} alt="" className="w-[800px] h-[300px] mx-auto bg-cover" />
                     </div>
 
                     {/* button section */}

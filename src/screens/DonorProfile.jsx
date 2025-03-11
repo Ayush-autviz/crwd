@@ -13,22 +13,22 @@ const likedMember = [
 
   const cardData = [
     {
-        img: '/logos/georgia.png',
+        img: 'georgia.png',
         title: `C5 Youth Foundation of Georgia`,
         location: `Atlanta, GA`,
     },
     {
-        img: '/logos/silence.png',
+        img: 'silence.png',
         title: `C5 Youth Foundation of Georgia`,
         location: `Atlanta, GA`,
     },
     {
-        img: '/logos/camp.png',
+        img: 'camp.png',
         title: `C5 Youth Foundation of Georgia`,
         location: `Atlanta, GA`,
     },
     {
-        img: '/logos/georgia.png',
+        img: 'georgia.png',
         title: `C5 Youth Foundation of Georgia`,
         location: `Atlanta, GA`,
     }
@@ -58,7 +58,7 @@ const DonorProfile = () => {
             {
                 image ? (
                     <div className='h-25 bg-[#616161] relative'>
-                    <img src={image}  className={`absolute top-[100%] z-30 shadow-xl left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24   rounded-full flex justify-center items-center cursor-pointer   transition-colors duration-300 `}/>  
+                    <img src={image}   className={`absolute top-[100%] z-30 shadow-xl left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24   rounded-full flex justify-center items-center cursor-pointer   transition-colors duration-300 `}/>  
 
                 </div>
                 ) : (
@@ -90,7 +90,7 @@ const DonorProfile = () => {
             <div className="text-2xl text-center  md:text-4xl text-[#373737] font-bold  mt-20">{name?name:"Natalie Root"}</div>
 
             <div className={` rounded-2xl bg-[#F3F3F2] flex flex-col justify-center items-center mt-10 p-8 mx-4 md:mx-10 lg:mx-20`}>
-                <img src='profile1.svg' className='md:h-30 md:w-30 w-20 h-20 rounded-full'/>
+                <img onClick={()=>{navigation("/nonprofit", { state: { image: 'profile1.svg',name:'Women Who Care'} })}} src='profile1.svg' className='md:h-30 md:w-30 w-20 h-20 rounded-full'/>
                 <div className="text-xl text-center  md:text-2xl text-[#373737] font-bold  mt-5">100+ Women Who Care- Pinellas Countyalie Root</div>
                 <div className="w-[30%] h-[1px] mt-4 mb-2 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#868181] to-transparent h-px"></div>

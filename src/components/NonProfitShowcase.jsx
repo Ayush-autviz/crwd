@@ -1,36 +1,38 @@
 import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const NonprofitShowcase = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const scrollRef = useRef(null);
+  const navigation = useNavigate();
 
   const nonprofits = [
     {
       id: 1,
       name: 'C5 Youth Foundation of Georgia',
       location: 'Atlanta, GA',
-      logo: '/logos/georgia.png',
+      logo: 'georgia.png',
       gradient: 'from-rose-100 to-orange-50'
     },
     {
       id: 2,
       name: 'C5 Youth Foundation of Georgia',
       location: 'Atlanta, GA',
-      logo: '/logos/silence.png',
+      logo: 'silence.png',
       gradient: 'from-violet-100 to-purple-50'
     },
     {
       id: 3,
       name: 'C5 Youth Foundation of Georgia',
       location: 'Atlanta, GA',
-      logo: '/logos/camp.png',
+      logo: 'camp.png',
       gradient: 'from-emerald-100 to-green-50'
     },
     {
       id: 4,
       name: 'C5 Youth Foundation of Georgia',
       location: 'Atlanta, GA',
-      logo: '/logos/georgia.png',
+      logo: 'georgia.png',
       gradient: 'from-blue-100 to-sky-50'
     }
   ];
@@ -83,6 +85,7 @@ const NonprofitShowcase = () => {
           <div className="flex space-x-8 pb-8 pt-4 px-6">
             {nonprofits.map((nonprofit) => (
               <div
+                onClick={()=>{navigation("/nonprofit", { state: { image: nonprofit.logo,name:nonprofit.name } })}}
                 key={nonprofit.id}
                 className="flex-none w-76 md:w-96 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
               >

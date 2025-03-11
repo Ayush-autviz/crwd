@@ -9,6 +9,7 @@ import About from '../components/AboutUsCard';
 const NonProfit = () => {
   const location = useLocation();
   const image = location.state?.image;
+  const name = location.state?.name;
   const navigation = useNavigate();
   const richColors = ["#F7194E", "#0C00FF", "#0cc602", "#932CFF", "#393939"];
   const [currentColor, setCurrentColor] = useState(richColors[0]);
@@ -49,7 +50,7 @@ const NonProfit = () => {
       </div>
 
       <div className="text-center mt-20 flex flex-col justify-center items-center px-2 md:px-6">
-        <h1 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">American Cancer Society</h1>
+        <h1 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">{name}</h1>
         <p className="text-[12px] px-5 md:text-[20px] text-gray-600 md:w-[50%] line-clamp-2">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.{" "}
           <a href="#" className="text-[#08A0CA] font-medium">
@@ -89,7 +90,7 @@ const NonProfit = () => {
         <hr className="border-[#989898] w-full" />
       </div>
 
-      <About />
+      <About image={image} name={name} />
       
       <Footer />
     </div>

@@ -1,5 +1,6 @@
 import { Plus, UserRound } from 'lucide-react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const likedMember = [
   { id: 1, image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww", alt: "Person 1" },
@@ -8,8 +9,9 @@ const likedMember = [
 ]
 
 const CRWDcard = ({item}) => {
+  const navigation = useNavigate();
   return (
-    <div className='bg-[#F3F2F2] rounded-xl flex flex-col  md:flex-row gap-4  p-5'>
+    <div onClick={()=>{navigation("/crwd", { state: { image: item.logo } })}} className='bg-[#F3F2F2] rounded-xl flex flex-col  md:flex-row gap-4  p-5'>
         <div className='rounded-xl flex items-center justify-center  p-5 px-10 bg-white'>
            <img src={item.logo} className='h-[180px] w-[180px]' />
         </div>

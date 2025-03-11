@@ -91,7 +91,12 @@ export default function ReviewCards() {
 
                             <div className="bg-[#F8F8F8] p-[14px] rounded-[10px] md:p-[30px] w-full md:rounded-[20px]">
                                 <div className="border-b border-[#999999]">
-                                    <h4 className="text-[#373737] text-[18px] md:text-2xl font-semibold mb-6">Larry Hudlemeyer</h4>
+                                    <h4
+                                    onClick={() => navigation("/profile", { 
+                                        state: { image: 'Ellipse 225.png', name: "Larry Hudlemeyer" }
+                                    })}
+                
+                                    className="text-[#373737] text-[18px] md:text-2xl font-semibold mb-6">Larry Hudlemeyer</h4>
                                     <div className="content is here">
                                         <span className="block w-full text-[#5E5E5E] text-[12px] md:text-[14px] font-medium">
                                             "Creating Opportunities for those who serve"
@@ -156,7 +161,9 @@ export default function ReviewCards() {
                                             />
                                             <div className="w-full">
                                                 <div className="border border-[#989898] rounded-[10px] px-3 py-2 md:rounded-[20px] md:px-6 md:py-5">
-                                                    <h4 className="text-[18px] md:text-xl font-medium">{comment.name}</h4>
+                                                    <h4                                                 onClick={() => navigation("/profile", { 
+                                                    state: { image: comment.image, name: comment.name }
+                                                })} className="text-[18px] md:text-xl font-medium cursor-pointer">{comment.name}</h4>
                                                     <p className="text-[12px] md:text-[16px] mt-1 md:mt-4 font-normal w-full md:text-lg md:w-[70%]">
                                                         {comment.text}
                                                     </p>
@@ -170,9 +177,12 @@ export default function ReviewCards() {
                                     <form onSubmit={handleCommentSubmit} className="mt-6">
                                         <div className="flex gap-4 items-start">
                                             <img 
+                                                onClick={() => navigation("/profile", { 
+                                                   state: { image: 'Ellipse 225.png', name: "Larry Hudlemeyer" }
+                                                })}
                                                 src="/Ellipse 225.png" 
                                                 alt="Current User" 
-                                                className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full"
+                                                className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-full cursor-pointer"
                                             />
                                             <div className="w-full">
                                                 <textarea
