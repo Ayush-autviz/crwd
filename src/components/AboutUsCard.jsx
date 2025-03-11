@@ -10,7 +10,7 @@ const About = ({image,name}) => {
         <div className="flex flex-col items-center mb-8">
           <h2 className="text-xl text-center md:text-3xl font-bold text-[#393939 mb-4">About</h2>
           {
-            image ? <img className='h-25 w-25 rounded-full bg-cover ' src={image}/>: <img className='h-25 w-25' src='crwd2.svg'/>
+            image ? <img className='h-25 w-25 bg-cover ' src={image}/>: <img className='h-25 w-25' src='crwd2.svg'/>
 
           }
           
