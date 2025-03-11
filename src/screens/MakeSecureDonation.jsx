@@ -175,7 +175,7 @@ const MakeSecureDonation = () => {
                 value="apple-pay"
                 checked={paymentMethod === 'apple-pay'}
                 onChange={(e) => setPaymentMethod(e.target.value)}
-                className="h-4 w-4 disabled:border-[#393939] accent-[#393939] "
+                className="h-4 w-4 disabled:border-[#393939] accent-[#393939] cursor-pointer"
               />
               <div className='flex flex-row justify-center items-center gap-2'>
               <img src='apple.svg'  className='h-5 w-5 md:h-6 md:w-6 mb-[2px] '/>
@@ -195,7 +195,7 @@ const MakeSecureDonation = () => {
                 value="credit-debit"
                 checked={paymentMethod === 'credit-debit'}
                 onChange={(e) => setPaymentMethod(e.target.value)}
-                className="h-4 w-4 disabled:border-[#393939] accent-[#393939]"
+                className="h-4 w-4 disabled:border-[#393939] accent-[#393939] cursor-pointer"
               />
               <span className="text-[15px] md:text-lg">Credit Or debit card</span>
             </label>
@@ -239,7 +239,7 @@ const MakeSecureDonation = () => {
                 type="checkbox"
                 checked={useBillingName}
                 onChange={handleCheckboxChange}
-                className="w-[18px] h-[18px] rounded-[5px] border-2 border-[#393939] accent-[#393939]"
+                className="w-[18px] h-[18px] rounded-[5px] border-2 border-[#393939] accent-[#393939] cursor-pointer"
               />
               <div className="text-[15px] md:text-lg">Use as billing name</div>
             </div>
