@@ -17,7 +17,7 @@ export default function HeroImage({ img, title, content }) {
 
                     {/* img section */}
                     <div className="mt-[30px] md:mt-[50px]">
-                        <img src={img} alt="" className="w-[40%] h-[400px] mx-auto bg-cover " />
+                        <img src={img} alt="" className="w-[400px] h-[400px] mx-auto bg-cover " />
                     </div>
 
                     {/* button section */}
