@@ -17,7 +17,7 @@ export default function HeroImage({ img, title, content }) {
 
                     {/* img section */}
                     <div className="mt-[30px] md:mt-[50px]">
-                        <img src={img} alt="" className="w-[800px] h-[300px] mx-auto bg-cover" />
+                        <img src={img} alt="" className="w-[40%] h-[400px] mx-auto bg-cover " />
                     </div>
 
                     {/* button section */}
@@ -28,7 +28,7 @@ export default function HeroImage({ img, title, content }) {
    <img className="h-[13px] ms-[-3px] object-contain" src="crwd.png"/>
  </button>
 
-<button className="font-black text-[16px] justify-center  items-center flex-1 md:flex-none md:w-fit   cursor-pointer h-11 w-fit  px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+<button onClick={()=>{navigation('/donation')}} className="font-black text-[16px] justify-center  items-center flex-1 md:flex-none md:w-fit   cursor-pointer h-11 w-fit  px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
   Donate Now
 </button>
 

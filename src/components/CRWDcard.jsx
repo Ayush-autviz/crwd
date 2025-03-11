@@ -11,7 +11,7 @@ const likedMember = [
 const CRWDcard = ({item}) => {
   const navigation = useNavigate();
   return (
-    <div onClick={()=>{navigation("/crwd", { state: { image: item.logo } })}} className='bg-[#F3F2F2] rounded-xl flex flex-col  md:flex-row gap-4  p-5'>
+    <div onClick={()=>{navigation("/crwd", { state: { image: item.logo } })}} className='bg-[#F3F2F2] rounded-xl flex flex-col cursor-pointer  md:flex-row gap-4  p-5'>
         <div className='rounded-xl flex items-center justify-center  p-5 px-10 bg-white'>
            <img src={item.logo} className='h-[180px] w-[180px]' />
         </div>

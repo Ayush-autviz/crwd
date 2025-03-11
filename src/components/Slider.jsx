@@ -59,7 +59,7 @@ const Slider = () => {
 >
  
             {cards.map((card, index) => (
-              <div key={index} className="w-full  md:w-1/2 xl:w-1/3 flex-shrink-0 px-2">
+              <div key={index}  onClick={()=>{navigation("/crwd", { state: { image: card.image } })}} className="w-full  md:w-1/2 xl:w-1/3 flex-shrink-0 px-2">
                 <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
                   <img  
                     onClick={()=>{navigation("/crwd", { state: { image: card.image } })}}
@@ -67,7 +67,7 @@ const Slider = () => {
                     alt={`Slide ${index + 1}`}
                     className="w-full h-74 object-cover cursor-pointer"
                   />
-                  <div className="absolute bottom-4 left-4 right-4 bg-white rounded-lg p-4 shadow">
+                  <div onClick={()=>{navigation("/crwd", { state: { image: card.image } })}} className="absolute  bottom-4 cursor-pointer left-4 right-4 bg-white rounded-lg p-4 shadow">
                     <h3 className="text-lg font-semibold">{card.title}</h3>
                     <div className="mt-2 bg-green-500 h-2 w-1/3 rounded"></div>
                   </div>
