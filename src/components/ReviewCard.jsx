@@ -96,7 +96,7 @@ export default function ReviewCards() {
                                         state: { image: 'Ellipse 225.png', name: "Larry Hudlemeyer" }
                                     })}
                 
-                                    className="text-[#373737] text-[18px] md:text-2xl font-semibold mb-6">Larry Hudlemeyer</h4>
+                                    className="text-[#373737] text-[18px] cursor-pointer md:text-2xl font-semibold mb-6">Larry Hudlemeyer</h4>
                                     <div className="content is here">
                                         <span className="block w-full text-[#5E5E5E] text-[12px] md:text-[14px] font-medium">
                                             "Creating Opportunities for those who serve"

@@ -31,7 +31,7 @@ const NonProfitCard = ({item}) => {
 
 
   return (
-    <div className='rounded-xl p-4  bg-white'>
+    <div  onClick={()=>{navigation("/nonprofit", { state: { image: item.image,name:item.title } })}} className='rounded-xl p-4  bg-white cursor-pointer'>
         <img src={item.image} className='rounded-xl w-full md:max-h-[500px] object-cover md:object-contain'/>
         <div className='flex flex-col gap-4 mt-6 items-start'>
         <div className="space-y-2">
@@ -54,7 +54,7 @@ const NonProfitCard = ({item}) => {
             </div>
 
         </div>
-        <button onClick={()=>{navigation("/nonprofit", { state: { image: item.image } })}} className="text-[12px] md:text-[18px] px-4 py-2 md:px-8 md:py-3 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium">
+        <button onClick={()=>{navigation("/nonprofit", { state: { image: item.image,name:item.title } })}} className="text-[12px] md:text-[18px] px-4 py-2 md:px-8 md:py-3 bg-[#393939] hover:shadow-xl transition-shadow cursor-pointer rounded-full border border-gray-300 text-white font-medium">
           Donate Now
         </button>
 

@@ -114,7 +114,7 @@ const Settings = () => {
                                 </div>
                             </div>
                         </div>
-                        <div onClick={()=>{setopenModal1(true)}} className=' md:py-2 p-3 h-fit rounded-full md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
+                        <div onClick={()=>{setopenModal1(true)}} className=' md:py-2 p-3 h-fit cursor-pointer rounded-full md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
                             <img src='edit.svg' className='h-4 w-4 font-semibold' />
                             <div className='font-semibold hidden md:block  text-[11px] text-white md:text-[15px]'>Edit</div>
                         </div>
@@ -125,7 +125,7 @@ const Settings = () => {
                 <div className='rounded-2xl border border-[#838383] w-full p-5 mt-10  md:p-7 '>
                     <div className='flex flex-row justify-between items-center  w-full'>
                         <div className='font-semibold text-xl md:text-left text-center md:text-2xl  my-2'>Your Profile</div>
-                        <div onClick={()=>{setopenModal2(true)}}  className=' md:py-2  h-fit rounded-full p-3 md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
+                        <div  onClick={()=>{setopenModal2(true)}}  className=' md:py-2 cursor-pointer  h-fit rounded-full p-3 md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
                             <img src='edit.svg' className='h-4 w-4 font-semibold' />
                             <div className='font-semibold hidden md:block text-[11px] text-white md:text-[15px]'>Edit</div>
                         </div>
@@ -174,7 +174,7 @@ const Settings = () => {
                 <div className='rounded-2xl border border-[#838383] w-full p-5 mt-10  md:p-7 mb-30 '>
                     <div className='flex flex-row justify-between items-center  w-full'>
                         <div className='font-semibold text-xl md:text-left text-center md:text-2xl  my-2'>Account Setting</div>
-                        <div onClick={()=>{setopenModal3(true)}}  className=' md:py-2 p-3  h-fit rounded-full md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
+                        <div onClick={()=>{setopenModal3(true)}}  className=' md:py-2 p-3 cursor-pointer h-fit rounded-full md:px-6 flex bg-[#393939] flex-row justify-center items-center gap-2'>
                             <img src='edit.svg' className='h-4 w-4 font-semibold' />
                             <div className='font-semibold hidden md:block text-[11px] text-white md:text-[15px]'>Edit</div>
                         </div>

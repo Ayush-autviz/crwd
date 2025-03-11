@@ -3,7 +3,7 @@ import React from 'react';
 
 const CRWDSection = ({ title, description, onClick }) => (
   <div 
-    className="border-b border-gray-200 py-6 cursor-pointer "
+    className="border-b border-gray-200 py-6  "
     onClick={onClick}
   >
     <div className="flex items-center justify-between">
