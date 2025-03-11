@@ -62,8 +62,8 @@ const Sidebar = ({ isOpen, onClose }) => {
 
             <div onClick={handleSetting} className="flex flex-row justify-between cursor-pointer hover:bg-[#F3F3F2] rounded-xl items-center px-2 py-4">
               <div className="flex flex-col ">
-                <div>About</div>
-                <div className="text-gray-400">How it works Pricing and More</div>
+                <div>Settings</div>
+                <div className="text-gray-400">Edit your profile</div>
               </div>
               <ChevronRight />
             </div>
