@@ -6,18 +6,22 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   const handleDonate = ()=>{
       navigation("/search")
+      onClose();
   }
 
   const handleAbout = ()=>{
-    navigation("/about")
+    navigation("/about");
+    onClose();
   }
 
   const handleHelp = ()=>{
-    navigation("/contact")
+    navigation("/contact");
+    onClose();
   }
 
   const handleSetting = ()=>{
-    navigation("/setting")
+    navigation("/setting");
+    onClose();
   }
 
   return (
