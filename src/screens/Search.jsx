@@ -180,7 +180,7 @@ const SearchScreen = () => {
             })}
           </div>
           <div className="flex justify-center mt-12 ">
-          <button onClick={()=>{navigation("search")}} className="font-[20px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
+          <button onClick={()=>{}} className="font-[20px]  cursor-pointer h-11 w-fit items-center px-8 py-1 gap-2 rounded-full flex flex-row bg-white text-gray-900 transition-shadow duration-200 border border-black">
           See more
           </button>
           </div>
